@@ -37,6 +37,24 @@
                 , <&macro_tap &kp G &kp I &kp F>
                 ;
         };
+        alttabcw: alttabcw {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp TAB>
+                , <&macro_release &kp LALT>
+                ;
+        }
+        alttabccw: alttabccw {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LALT &kp LSHFT>
+                , <&macro_tap &kp TAB>
+                , <&macro_release &kp LALT &kp LSHFT>
+                ;
+        }
     };
 
         keymap {
@@ -65,7 +83,7 @@ label= "BASE"                              ;
     &kp Z       &kp X       &kp C       &kp D       &kp V           &kp K       &kp H       &kp COMMA   &kp DOT     &kp FSLH
                                         &kp TAB     &lt NAV SPACE   &lt SYM RET &kp BSPC    
                         >;
-            sensor-bindings = <&inc_dec_kp A B &inc_dec_kp C D>;
+            sensor-bindings = <&inc_dec_kp &alttabcw &alttabccw &inc_dec_kp C D>;
                 };
 
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
