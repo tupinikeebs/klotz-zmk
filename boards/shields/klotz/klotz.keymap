@@ -45,7 +45,7 @@
                 , <&macro_tap &kp TAB>
                 , <&macro_release &kp LALT>
                 ;
-        }
+        };
         alttabccw: alttabccw {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -54,7 +54,7 @@
                 , <&macro_tap &kp TAB>
                 , <&macro_release &kp LALT &kp LSHFT>
                 ;
-        }
+        };
     };
 
     behaviors {
