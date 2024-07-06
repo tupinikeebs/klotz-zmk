@@ -37,22 +37,20 @@
                 , <&macro_tap &kp G &kp I &kp F>
                 ;
         };
-        alttabcw: alttabcw {
+        tabcw: tabcw {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp LALT>
-                , <&macro_tap &kp TAB>
-                , <&macro_release &kp LALT>
+                = <&macro_tap &kp TAB>
                 ;
         };
-        alttabccw: alttabccw {
+        tabccw: tabccw {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp LALT &kp LSHFT>
+                = <&macro_press &kp LSHFT>
                 , <&macro_tap &kp TAB>
-                , <&macro_release &kp LALT &kp LSHFT>
+                , <&macro_release &kp LSHFT>
                 ;
         };
     };
@@ -61,7 +59,7 @@
         encoder_alt_tab: encoder_alt_tab {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
-            bindings = <&alttabcw>, <&alttabccw>;
+            bindings = <&tabcw>, <&tabccw>;
         };
     };
 
