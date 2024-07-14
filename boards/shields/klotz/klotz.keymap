@@ -82,7 +82,7 @@ display-name= "BASE"                              ;
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷
 
-    &kp Q       &kp W       &kp F       &kp P       &kp B           &kp J       &kp L       &kp U       &kp Y       &kp SEMI
+    &mt LGUI Q  &mt LALT W  &mt LCTRL F &mt LSHFT P &kp B           &kp J       &mt RSHFT L &mt RCTRL U &mt RALT Y  &mt RGUI SEMI
     &mt LGUI A  &mt LALT R  &mt LCTRL S &mt LSHFT T &kp G           &kp M       &mt RSHFT N &mt RCTRL E &mt RALT I  &mt RGUI O
     &kp Z       &kp X       &kp C       &kp D       &kp V           &kp K       &kp H       &kp COMMA   &kp DOT     &kp FSLH
                                         &lt MIRR RET &lt NAV SPACE  &lt SYM TAB &lt MIRR BSPC    
