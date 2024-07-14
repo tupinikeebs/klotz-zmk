@@ -6,7 +6,8 @@
 #define BASE 0
 #define NAV  1
 #define SYM  2
-#define ADJ  3
+#define MIRR 3
+#define ADJ  4
 
 &mt {
   quick-tap-ms = <100>;
@@ -22,6 +23,13 @@
                 timeout-ms = <50>;
                 key-positions = <0 1>;
                 bindings = <&kp ESC>;
+            };
+            
+            compatible = "zmk,combos";
+            combo_bspc {
+                timeout-ms = <50>;
+                key-positions = <3 4>;
+                bindings = <&kp BSPC>;
             };
     };
 
@@ -77,7 +85,7 @@ display-name= "BASE"                              ;
     &kp Q       &kp W       &kp F       &kp P       &kp B           &kp J       &kp L       &kp U       &kp Y       &kp SEMI
     &mt LGUI A  &mt LALT R  &mt LCTRL S &mt LSHFT T &kp G           &kp M       &mt RSHFT N &mt RCTRL E &mt RALT I  &mt RGUI O
     &kp Z       &kp X       &kp C       &kp D       &kp V           &kp K       &kp H       &kp COMMA   &kp DOT     &kp FSLH
-                                        &kp RET     &lt NAV SPACE   &lt SYM TAB &kp BSPC    
+                                        &lt MIRR RET &lt NAV SPACE  &lt SYM TAB &lt MIRR BSPC    
                         >;
             sensor-bindings = <&encoder_alt_tab &inc_dec_kp C_VOL_UP C_VOL_DN>;
                 };
@@ -132,6 +140,32 @@ display-name= "SYM"                               ;
     &trans      &kp DLLR    &kp PRCNT   &kp CARET   &kp LBKT        &kp RBKT    &kp BSLH    &kp SQT     &kp DQT     &trans
     &trans      &kp EXCL    &kp AT      &kp HASH    &kp LPAR        &kp RPAR    &trans      &trans      &trans      &trans
                                         &trans      &mo ADJ         &trans      &trans      
+                        >;
+            sensor-bindings = <&encoder_alt_tab &inc_dec_kp C_VOL_UP C_VOL_DN>;
+                };
+
+// ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+
+                mirror_layer {
+// ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+display-name= "MIRR"                              ;
+// ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+// ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
+// ┃     ; :   ┃     Y     ┃     U     ┃     L     ┃     J     ┃   ┃     B     ┃     P     ┃     F     ┃     W     ┃     Q     ┃
+// ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
+// ┃     O     ┃     I     ┃     E     ┃     N     ┃     M     ┃   ┃     G     ┃     T     ┃     S     ┃     R     ┃     A     ┃
+// ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
+// ┃     /     ┃     .     ┃     ,     ┃     H     ┃     K     ┃   ┃     V     ┃     D     ┃     C     ┃     X     ┃     Z     ┃
+// ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
+//                                     ┃           ┃    TAB    ┃   ┃  SPACE    ┃   ENTER   ┃
+//                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┛
+ bindings = <
+// ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷
+    
+  &mt LGUI SEMI &mt LALT Y  &mt LCTRL U &mt LSHFT L &kp J           &kp B       &mt RSHFT P &mt RCTRL F &mt RALT W  &mt RGUI Q
+    &mt LGUI O  &mt LALT I  &mt LCTRL E &mt LSHFT N &kp M           &kp G       &mt RSHFT T &mt RCTRL S &mt RALT R  &mt RGUI A
+    &kp FSLH    &kp DOT     &kp COMMA   &kp H       &kp K           &kp V       &kp D       &kp C   &kp X     &kp Z
+                                        &trans      &kp TAB         &kp SPACE   &kp RET
                         >;
             sensor-bindings = <&encoder_alt_tab &inc_dec_kp C_VOL_UP C_VOL_DN>;
                 };
