@@ -6,15 +6,7 @@
 #define BASE 0
 #define NAV  1
 #define SYM  2
-#define MIRR 3
-#define ADJ  4
-
-&mt {
-  quick-tap-ms = <100>;
-  global-quick-tap;
-  flavor = "tap-preferred";
-  tapping-term-ms = <170>;
-};
+#define ADJ  3
 
 / {
     combos {
@@ -58,6 +50,16 @@
             #sensor-binding-cells = <0>;
             bindings = <&tabcw>, <&tabccw>;
         };
+
+        ct: custom_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+            tapping-term-ms = <300>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
+        }
     };
 
 
@@ -82,10 +84,10 @@ display-name= "BASE"                              ;
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷
 
-    &mt LGUI Q  &mt LALT W  &mt LCTRL F &mt LSHFT P &kp B           &kp J       &mt RSHFT L &mt RCTRL U &mt RALT Y  &mt RGUI SEMI
-    &mt LGUI A  &mt LALT R  &mt LCTRL S &mt LSHFT T &kp G           &kp M       &mt RSHFT N &mt RCTRL E &mt RALT I  &mt RGUI O
+    &ct LGUI Q  &ct LALT W  &ct LCTRL F &ct LSHFT P &kp B           &kp J       &ct RSHFT L &ct RCTRL U &ct RALT Y  &ct RGUI SEMI
+    &kp A       &kp R       &kp S       &kp T       &kp G           &kp M       &kp N       &kp E       &kp I       &kp O
     &kp Z       &kp X       &kp C       &kp D       &kp V           &kp K       &kp H       &kp COMMA   &kp DOT     &kp FSLH
-                                        &lt MIRR RET &lt NAV SPACE  &lt SYM TAB &lt MIRR BSPC    
+                                       &ct LCTRL RET &lt NAV SPACE  &lt SYM TAB &ct RSHFT BSPC    
                         >;
             sensor-bindings = <&encoder_alt_tab &inc_dec_kp C_VOL_UP C_VOL_DN>;
                 };
@@ -110,7 +112,7 @@ display-name= "NAVI"                              ;
 // ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷
 
     &kp ESC     &kp KP_N7   &kp KP_N8   &kp KP_N9   &kp KP_PLUS     &trans      &trans      &kp UP      &trans      &trans
-    &kp TAB     &kp KP_N4   &kp KP_N5   &kp KP_N6   &kp KP_MINUS    &trans      &mt RSHFT LEFT &kp DOWN &kp RIGHT   &trans
+    &kp TAB     &kp KP_N4   &kp KP_N5   &kp KP_N6   &kp KP_MINUS    &trans      &ct RSHFT LEFT &kp DOWN &kp RIGHT   &trans
     &kp KP_N0   &kp KP_N1   &kp KP_N2   &kp KP_N3   &kp KP_MULTIPLY &trans      &kp PG_UP   &kp CAPS    &kp PG_DN   &trans
                                         &kp RET     &trans          &mo ADJ     &trans     
                         >;
@@ -140,32 +142,6 @@ display-name= "SYM"                               ;
     &trans      &kp DLLR    &kp PRCNT   &kp CARET   &kp LBKT        &kp RBKT    &kp BSLH    &kp SQT     &kp DQT     &trans
     &trans      &kp EXCL    &kp AT      &kp HASH    &kp LPAR        &kp RPAR    &trans      &trans      &trans      &trans
                                         &trans      &mo ADJ         &trans      &trans      
-                        >;
-            sensor-bindings = <&encoder_alt_tab &inc_dec_kp C_VOL_UP C_VOL_DN>;
-                };
-
-// ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-
-                mirror_layer {
-// ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-display-name= "MIRR"                              ;
-// ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
-// ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-// ┃     ; :   ┃     Y     ┃     U     ┃     L     ┃     J     ┃   ┃     B     ┃     P     ┃     F     ┃     W     ┃     Q     ┃
-// ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-// ┃     O     ┃     I     ┃     E     ┃     N     ┃     M     ┃   ┃     G     ┃     T     ┃     S     ┃     R     ┃     A     ┃
-// ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-// ┃     /     ┃     .     ┃     ,     ┃     H     ┃     K     ┃   ┃     V     ┃     D     ┃     C     ┃     X     ┃     Z     ┃
-// ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-//                                     ┃           ┃    TAB    ┃   ┃  SPACE    ┃   ENTER   ┃
-//                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┛
- bindings = <
-// ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷
-    
-  &mt LGUI SEMI &mt LALT Y  &mt LCTRL U &mt LSHFT L &kp J           &kp B       &mt RSHFT P &mt RCTRL F &mt RALT W  &mt RGUI Q
-    &mt LGUI O  &mt LALT I  &mt LCTRL E &mt LSHFT N &kp M           &kp G       &mt RSHFT T &mt RCTRL S &mt RALT R  &mt RGUI A
-    &kp FSLH    &kp DOT     &kp COMMA   &kp H       &kp K           &kp V       &kp D       &kp C   &kp X     &kp Z
-                                        &trans      &kp TAB         &kp SPACE   &kp RET
                         >;
             sensor-bindings = <&encoder_alt_tab &inc_dec_kp C_VOL_UP C_VOL_DN>;
                 };
