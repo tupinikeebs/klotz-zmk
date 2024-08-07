@@ -25,7 +25,7 @@
             };
             
             compatible = "zmk,combos";
-            combo_bspc {
+            combo_lgui {
                 timeout-ms = <50>;
                 key-positions = <1 2>;
                 bindings = <&kp LGUI>;
