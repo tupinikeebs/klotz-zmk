@@ -8,6 +8,10 @@
 #define SYM  2
 #define ADJ  3
 
+&lt {
+     flavor = "balanced";
+}
+
 / {
     combos {
             compatible = "zmk,combos";
@@ -68,11 +72,6 @@
             require-prior-idle-ms = <150>;
         };
     };
-
-    &lt {
-        flavor = "balanced";
-    }
-
 
         keymap {
                 compatible = "zmk,keymap";
