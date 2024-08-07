@@ -34,6 +34,13 @@
                 key-positions = <1 2>;
                 bindings = <&kp LGUI>;
             };
+            
+            compatible = "zmk,combos";
+            combo_ret {
+                timeout-ms = <50>;
+                key-positions = <13 14>;
+                bindings = <&kp RET>;
+            };
     };
 
     macros {
@@ -97,7 +104,7 @@ display-name= "BASE"                              ;
     &ct LGUI Q  &ct LALT W  &ct LCTRL F &ct LSHFT P &kp B           &kp J       &ct RSHFT L &ct RCTRL U &ct RALT Y  &ct RGUI SEMI
     &kp A       &kp R       &kp S       &kp T       &kp G           &kp M       &kp N       &kp E       &kp I       &kp O
     &kp Z       &kp X       &kp C       &kp D       &kp V           &kp K       &kp H       &kp COMMA   &kp DOT     &kp FSLH
-                                       &ct LCTRL RET &lt NAV SPACE  &lt SYM TAB &ct RSHFT BSPC    
+                                       &ct LCTRL TAB &lt NAV SPACE  &lt SYM RET &ct RSHFT BSPC    
                         >;
             sensor-bindings = <&encoder_alt_tab &inc_dec_kp C_VOL_UP C_VOL_DN>;
                 };
