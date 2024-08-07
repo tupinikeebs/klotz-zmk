@@ -92,7 +92,7 @@
             flavor = "balanced";
             bindings = <&kp>, <&sl>;
             tapping-term-ms = <300>;
-        }
+        };
     };
 
         keymap {
