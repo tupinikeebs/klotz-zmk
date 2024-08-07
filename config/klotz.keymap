@@ -117,7 +117,7 @@ display-name= "BASE"                              ;
 display-name= "NAVI"                              ;
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 // ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-// ┃    ESC    ┃     7     ┃     8     ┃     9     ┃     + =   ┃   ┃           ┃    B      ┃     UP    ┃     W     ┃           ┃
+// ┃    CTRL   ┃     7     ┃     8     ┃     9     ┃     + =   ┃   ┃           ┃    B      ┃     UP    ┃     W     ┃           ┃
 // ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
 // ┃    TAB    ┃     4     ┃     5     ┃     6     ┃     - _   ┃   ┃           ┃   LEFT    ┃    DOWN   ┃   RIGHT   ┃           ┃
 // ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
@@ -128,7 +128,7 @@ display-name= "NAVI"                              ;
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷
 
-    &kp ESC     &kp N7      &kp N8      &kp N9      &kp PLUS        &trans      &kp B       &kp UP      &kp W       &trans
+    &kp LCTRL   &kp N7      &kp N8      &kp N9      &kp PLUS        &trans      &kp B       &kp UP      &kp W       &trans
     &kp TAB     &kp N4      &kp N5      &kp N6      &kp MINUS       &trans      &ct RSHFT LEFT &kp DOWN &kp RIGHT   &trans
     &kp N0      &kp N1      &kp N2      &kp N3      &kp KP_MULTIPLY &trans      &kp PG_UP   &kp CAPS    &kp PG_DN   &trans
                                         &kp RET     &trans          &mo ADJ     &kp LSHFT     
