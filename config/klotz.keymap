@@ -36,10 +36,10 @@
             };
             
             compatible = "zmk,combos";
-            combo_ret {
+            combo_del {
                 timeout-ms = <50>;
                 key-positions = <8 9>;
-                bindings = <&kp RET>;
+                bindings = <&kp DEL>;
             };
 
             compatible = "zmk,combos";
