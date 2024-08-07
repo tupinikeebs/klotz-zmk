@@ -121,9 +121,9 @@ display-name= "NAVI"                              ;
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷
 
-    &kp ESC     &kp KP_N7   &kp KP_N8   &kp KP_N9   &kp KP_PLUS     &trans      &kp B       &kp UP      &kp W       &trans
-    &kp TAB     &kp KP_N4   &kp KP_N5   &kp KP_N6   &kp KP_MINUS    &trans      &ct RSHFT LEFT &kp DOWN &kp RIGHT   &trans
-    &kp KP_N0   &kp KP_N1   &kp KP_N2   &kp KP_N3   &kp KP_MULTIPLY &trans      &kp PG_UP   &kp CAPS    &kp PG_DN   &trans
+    &kp ESC     &kp N7      &kp N8      &kp N9      &kp PLUS        &trans      &kp B       &kp UP      &kp W       &trans
+    &kp TAB     &kp N4      &kp N5      &kp N6      &kp MINUS       &trans      &ct RSHFT LEFT &kp DOWN &kp RIGHT   &trans
+    &kp N0      &kp N1      &kp N2      &kp N3      &kp KP_MULTIPLY &trans      &kp PG_UP   &kp CAPS    &kp PG_DN   &trans
                                         &kp RET     &trans          &mo ADJ     &kp LSHFT     
                         >;
             sensor-bindings = <&encoder_alt_tab &inc_dec_kp C_VOL_UP C_VOL_DN>;
