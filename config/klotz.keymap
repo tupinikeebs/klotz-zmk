@@ -22,6 +22,13 @@
             };
             
             compatible = "zmk,combos";
+            combo_lgui {
+                timeout-ms = <50>;
+                key-positions = <1 2>;
+                bindings = <&kp LGUI>;
+            };
+            
+            compatible = "zmk,combos";
             combo_bspc {
                 timeout-ms = <50>;
                 key-positions = <3 4>;
@@ -29,12 +36,12 @@
             };
             
             compatible = "zmk,combos";
-            combo_lgui {
+            combo_ret {
                 timeout-ms = <50>;
-                key-positions = <1 2>;
-                bindings = <&kp LGUI>;
+                key-positions = <8 9>;
+                bindings = <&kp RET>;
             };
-            
+
             compatible = "zmk,combos";
             combo_ret {
                 timeout-ms = <50>;
