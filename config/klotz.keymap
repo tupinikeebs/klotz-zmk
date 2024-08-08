@@ -92,7 +92,7 @@
            compatible = "zmk,combos";
             combo_ctrlv {
                 timeout-ms = <COMBOMS>;
-                key-positions = <22 23>;
+                key-positions = <23 24>;
                 bindings
                   = <&macro_crtlv>;
             };
