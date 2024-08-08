@@ -7,6 +7,7 @@
 #define NAV  1
 #define SYM  2
 #define ADJ  3
+#define COMBOMS 40
 
 &lt {
      flavor = "balanced";
@@ -16,49 +17,49 @@
     combos {
             compatible = "zmk,combos";
             combo_esc {
-                timeout-ms = <50>;
+                timeout-ms = <COMBOMS>;
                 key-positions = <0 1>;
                 bindings = <&macro_esc>;
             };
             
             compatible = "zmk,combos";
             combo_lgui {
-                timeout-ms = <50>;
+                timeout-ms = <COMBOMS>;
                 key-positions = <10 11>;
                 bindings = <&kp LGUI>;
             };
             
             compatible = "zmk,combos";
             combo_bspc {
-                timeout-ms = <50>;
+                timeout-ms = <COMBOMS>;
                 key-positions = <3 4>;
                 bindings = <&kp BSPC>;
             };
             
             compatible = "zmk,combos";
             combo_del {
-                timeout-ms = <50>;
+                timeout-ms = <COMBOMS>;
                 key-positions = <8 9>;
                 bindings = <&kp DEL>;
             };
 
             compatible = "zmk,combos";
             combo_ret {
-                timeout-ms = <50>;
+                timeout-ms = <COMBOMS>;
                 key-positions = <13 14>;
                 bindings = <&kp RET>;
             }; 
             
             compatible = "zmk,combos";
             combo_underscore {
-                timeout-ms = <50>;
+                timeout-ms = <COMBOMS>;
                 key-positions = <18 19>;
                 bindings = <&kp UNDERSCORE>;
             };
             
             compatible = "zmk,combos";
             combo_ctrlz {
-                timeout-ms = <50>;
+                timeout-ms = <COMBOMS>;
                 key-positions = <20 21>;
                 bindings
                   = <&macro_crtlz>;
@@ -66,7 +67,7 @@
 
             compatible = "zmk,combos";
             combo_ctrlshftz {
-                timeout-ms = <50>;
+                timeout-ms = <COMBOMS>;
                 key-positions = <20 21 22>;
                 bindings
                   = <&macro_crtlshftz>;
@@ -74,7 +75,7 @@
 
             compatible = "zmk,combos";
             combo_ctrlx {
-                timeout-ms = <50>;
+                timeout-ms = <COMBOMS>;
                 key-positions = <21 22>;
                 bindings
                   = <&macro_crtlx>;
@@ -82,7 +83,7 @@
 
             compatible = "zmk,combos";
             combo_ctrlc {
-                timeout-ms = <50>;
+                timeout-ms = <COMBOMS>;
                 key-positions = <22 23>;
                 bindings
                   = <&macro_crtlc>;
@@ -90,7 +91,7 @@
             
            compatible = "zmk,combos";
             combo_ctrlv {
-                timeout-ms = <50>;
+                timeout-ms = <COMBOMS>;
                 key-positions = <22 23>;
                 bindings
                   = <&macro_crtlv>;
@@ -209,8 +210,8 @@ display-name= "BASE"                              ;
 
     &ct LGUI Q  &ct LALT W  &ct LCTRL F &ct LSHFT P &kp B           &kp J       &ct RSHFT L &ct RCTRL U &ct RALT Y  &ct RGUI SEMI
     &kp A       &kp R       &kp S       &kp T       &kp G           &kp M       &kp N       &kp E       &kp I       &kp O
-   &htl NAV NAV &htl SYM SYM &kp C      &kp D       &kp V           &kp K       &kp H       &kp C       &kp X       &kp Z
-                                        &kp LCTRL   &kp SPACE   &kp LALT    &ct RSHFT TAB    
+   &htl NAV NAV &htl SYM SYM &kp DOT    &kp D       &kp V           &kp K       &kp H       &kp C       &kp X       &kp Z
+                                        &kp LCTRL   &kp SPACE       &kp LALT    &ct RSHFT TAB    
                         >;
             sensor-bindings = <&encoder_alt_tab &inc_dec_kp C_VOL_UP C_VOL_DN>;
                 };
