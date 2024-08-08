@@ -48,6 +48,46 @@
                 key-positions = <13 14>;
                 bindings = <&kp RET>;
             };
+            
+            compatible = "zmk,combos";
+            combo_ctrlz {
+                timeout-ms = <50>;
+                key-positions = <20 21>;
+                bindings
+                  = <&macro_crtlz>;
+            };
+
+            compatible = "zmk,combos";
+            combo_ctrlshftz {
+                timeout-ms = <50>;
+                key-positions = <20 21 22>;
+                bindings
+                  = <&macro_crtlshftz>;
+            };
+
+            compatible = "zmk,combos";
+            combo_ctrlx {
+                timeout-ms = <50>;
+                key-positions = <21 22>;
+                bindings
+                  = <&macro_crtlx>;
+            };
+
+            compatible = "zmk,combos";
+            combo_ctrlc {
+                timeout-ms = <50>;
+                key-positions = <22 23>;
+                bindings
+                  = <&macro_crtlc>;
+            };
+            
+           compatible = "zmk,combos";
+            combo_ctrlv {
+                timeout-ms = <50>;
+                key-positions = <22 23>;
+                bindings
+                  = <&macro_crtlv>;
+            };
     };
 
     macros {
@@ -65,6 +105,53 @@
                 = <&macro_press &kp LSHFT>
                 , <&macro_tap &kp TAB>
                 , <&macro_release &kp LSHFT>
+                ;
+        };
+        macro_crtlz: macro_ctrlz {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp Z>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
+        macro_crtlshftz: macro_ctrlshftz {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_press &kp LSHFT>
+                , <&macro_tap &kp Z>
+                , <&macro_release &kp LCTRL>
+                , <&macro_release &kp LSHFT>
+                ;
+        };
+        macro_crtlx: macro_ctrlx {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp X>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
+        macro_crtlc: macro_ctrlc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp C>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
+        macro_crtlv: macro_ctrlv {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp V>
+                , <&macro_release &kp LCTRL>
                 ;
         };
     };
