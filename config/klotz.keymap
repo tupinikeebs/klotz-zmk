@@ -7,7 +7,7 @@
 #define NAV  1
 #define SYM  2
 #define ADJ  3
-#define COMBOMS 25
+#define COMBOMS 35
 
 &lt {
      flavor = "balanced";
@@ -19,9 +19,18 @@
             combo_esc {
                 timeout-ms = <COMBOMS>;
                 key-positions = <0 1>;
-                bindings = <&macro_esc>;
+                bindings = <&kp ESC>;
+                layers = <BASE>
             };
             
+            compatible = "zmk,combos";
+            combo_to_base {
+                timeout-ms = <COMBOMS>;
+                key-positions = <0 1>;
+                bindings = <&to BASE>;
+                layers = <NAV SYM ADJ>
+            };
+
             compatible = "zmk,combos";
             combo_lgui {
                 timeout-ms = <COMBOMS>;
@@ -106,7 +115,9 @@
                 = <&to BASE>
                 , <&kp ESC>
                 ;
-        };        tabcw: tabcw {
+        };        
+        
+        tabcw: tabcw {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -226,8 +237,8 @@ display-name= "NAVI"                              ;
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷
 
-    &trans      &kp N7      &kp N8      &kp N9      &kp EQUAL       &trans      &kp B       &kp UP      &kp W       &kp E
-    &kp TAB     &kp N4      &kp N5      &kp N6      &kp MINUS       &trans      &ct RSHFT LEFT &kp DOWN &kp RIGHT   &trans
+    &trans      &kp N7      &kp N8      &kp N9      &kp EQUAL       &kp RBRC    &kp B       &kp UP      &kp W       &kp E
+    &kp TAB     &kp N4      &kp N5      &kp N6      &kp MINUS       &kp LBRC    &ct RSHFT LEFT &kp DOWN &kp RIGHT   &trans
     &trans      &kp N1      &kp N2      &kp N3      &kp KP_MULTIPLY &trans      &kp PG_UP   &kp CAPS    &kp PG_DN   &trans
                                         &kp N0      &trans          &mo ADJ     &kp LSHFT     
                         >;
@@ -244,10 +255,10 @@ display-name= "SYM"                               ;
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷
 
-    &kp AMPS    &trans      &kp KP_MULTIPLY &kp GRAVE &kp LBRC      &kp RBRC    &kp RSHFT   &kp RCTRL   &kp RALT    &trans        
+    &kp AMPS    &trans      &kp KP_MULTIPLY &kp GRAVE &kp LBRC      &kp RBRC    &kp AMPS    &kp DLLR    &trans      &trans        
     &kp DLLR    &trans      &kp PRCNT   &kp CARET   &kp LPAR        &kp RPAR    &kp BSLH    &kp SQT     &kp DQT     &kp QMARK
     &kp EXCL    &trans      &kp AT      &kp HASH    &kp LBKT        &kp RBKT    &kp COMMA   &kp DOT     &kp FSLH    &trans
-                                        &kp LSHFT   &kp EXCL        &trans      &trans      
+                                        &kp LSHFT   &kp EXCL        &trans      &trans
                         >;
             sensor-bindings = <&encoder_alt_tab &inc_dec_kp C_VOL_UP C_VOL_DN>;
                 };
