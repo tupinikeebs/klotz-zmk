@@ -258,7 +258,7 @@ display-name= "SYM"                               ;
     &kp AMPS    &trans      &kp KP_MULTIPLY &kp GRAVE &kp LBRC      &kp RBRC    &kp AMPS    &kp DLLR    &trans      &trans        
     &kp DLLR    &trans      &kp PRCNT   &kp CARET   &kp LPAR        &kp RPAR    &kp BSLH    &kp SQT     &kp DQT     &kp QMARK
     &kp EXCL    &trans      &kp AT      &kp HASH    &kp LBKT        &kp RBKT    &kp COMMA   &kp DOT     &kp FSLH    &trans
-                                        &kp LSHFT   &kp EXCL        &trans      &trans
+                                        &kp LCTRL   &kp EXCL        &trans      &kp RSHFT
                         >;
             sensor-bindings = <&encoder_alt_tab &inc_dec_kp C_VOL_UP C_VOL_DN>;
                 };
