@@ -20,7 +20,7 @@
                 timeout-ms = <COMBOMS>;
                 key-positions = <0 1>;
                 bindings = <&kp ESC>;
-                layers = <BASE>
+                layers = <BASE>;
             };
             
             compatible = "zmk,combos";
@@ -28,7 +28,7 @@
                 timeout-ms = <COMBOMS>;
                 key-positions = <0 1>;
                 bindings = <&to BASE>;
-                layers = <NAV SYM ADJ>
+                layers = <NAV SYM ADJ>;
             };
 
             compatible = "zmk,combos";
