@@ -255,7 +255,7 @@ display-name= "SYM"                               ;
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷
 
-    &kp AMPS    &trans      &kp KP_MULTIPLY &kp GRAVE &kp LBRC      &kp RBRC    &kp AMPS    &kp DLLR    &trans      &trans        
+    &kp AMPS    &trans      &kp KP_MULTIPLY &kp GRAVE &kp LBRC      &kp RBRC    &kp AMPS    &kp DLLR    &trans      &kp COLON
     &kp DLLR    &trans      &kp PRCNT   &kp CARET   &kp LPAR        &kp RPAR    &kp BSLH    &kp SQT     &kp DQT     &kp QMARK
     &kp EXCL    &trans      &kp AT      &kp HASH    &kp LBKT        &kp RBKT    &kp COMMA   &kp DOT     &kp FSLH    &trans
                                         &kp LCTRL   &kp EXCL        &trans      &kp RSHFT
