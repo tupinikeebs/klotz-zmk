@@ -39,7 +39,7 @@
             };
             
             compatible = "zmk,combos";
-            combo_lgui {
+            combo_spc {
                 timeout-ms = <COMBOMS>;
                 key-positions = <11 13>;
                 bindings = <&kp SPACE>;
