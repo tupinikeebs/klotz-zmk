@@ -41,7 +41,7 @@
             compatible = "zmk,combos";
             combo_spc {
                 timeout-ms = <COMBOMS>;
-                key-positions = <11 13>;
+                key-positions = <12 13>;
                 bindings = <&kp SPACE>;
             };
             
