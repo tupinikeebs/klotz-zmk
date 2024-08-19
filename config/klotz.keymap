@@ -7,7 +7,7 @@
 #define NAV  1
 #define SYM  2
 #define ADJ  3
-#define COMBOMS 35
+#define COMBOMS 20
 
 &lt {
      flavor = "balanced";
@@ -42,6 +42,13 @@
             combo_spc {
                 timeout-ms = <COMBOMS>;
                 key-positions = <12 13>;
+                bindings = <&kp SPACE>;
+            };
+
+            compatible = "zmk,combos";
+            combo_spc_2 {
+                timeout-ms = <COMBOMS>;
+                key-positions = <16 17>;
                 bindings = <&kp SPACE>;
             };
             
@@ -265,8 +272,8 @@ display-name= "NAVI"                              ;
 
     &trans      &kp N7      &kp N8      &kp N9      &kp EQUAL       &kp RBRC    &kp B       &kp UP      &kp W       &kp E
     &kp TAB     &kp N4      &kp N5      &kp N6      &kp MINUS       &kp LBRC    &kp LEFT    &kp DOWN    &kp RIGHT   &trans
-    &trans      &kp N1      &kp N2      &kp N3      &kp KP_MULTIPLY &trans      &macro_up   &kp CAPS    &macro_down   &trans
-                                        &kp N0      &kp LALT       &ct RSHFT TAB &mo ADJ     
+    &trans      &kp N1      &kp N2      &kp N3      &kp KP_MULTIPLY &trans      &macro_up   &kp CAPS    &macro_down &trans
+                                        &kp N0      &kp LALT        &ct RSHFT TAB &mo ADJ     
                         >;
             sensor-bindings = <&encoder_alt_tab &inc_dec_kp C_VOL_UP C_VOL_DN>;
                 };
