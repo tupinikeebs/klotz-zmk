@@ -7,6 +7,8 @@
 #define NAV  1
 #define SYM  2
 #define ADJ  3
+#define OS   4
+
 #define COMBOMS 20
 
 &lt {
@@ -230,6 +232,15 @@
             tapping-term-ms = <300>;
             quick-tap-ms = <175>;
         };
+        
+        ctl: custom_tap_layer {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            bindings = <&mo>, <&kp>;
+            tapping-term-ms = <300>;
+            quick-tap-ms = <175>;
+        };
 
         htl: hold_toggle_layer {
             compatible = "zmk,behavior-hold-tap";
@@ -254,7 +265,7 @@ display-name= "BASE"                              ;
 
     &ct LGUI Q  &ct LALT W  &ct LCTRL F &ct LSHFT P &kp B           &kp J       &ct RSHFT L &ct RCTRL U &ct RALT Y  &ct RGUI SEMI
     &kp A       &kp R       &kp S       &kp T       &kp G           &kp M       &kp N       &kp E       &kp I       &kp O
-   &htl NAV NAV &htl SYM SYM &kp DOT    &kp D       &kp V           &kp K       &kp H       &kp C       &kp X       &kp Z
+   &htl NAV NAV &htl SYM SYM &ctl OS DOT &kp D      &kp V           &kp K       &kp H       &kp C       &kp X       &kp Z
                                         &kp LCTRL   &kp SPACE       &ct RSHFT TAB &kp LALT
                         >;
             sensor-bindings = <&encoder_alt_tab &inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -270,8 +281,8 @@ display-name= "NAVI"                              ;
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷
 
-    &trans      &kp N7      &kp N8      &kp N9      &kp EQUAL       &kp RBRC    &kp B       &kp UP      &kp W       &kp E
-    &kp TAB     &kp N4      &kp N5      &kp N6      &kp MINUS       &kp LBRC    &kp LEFT    &kp DOWN    &kp RIGHT   &trans
+    &trans      &kp N7     &ct LCTRL N8 &kp N9      &kp EQUAL       &kp LBRC    &kp B       &kp UP      &kp W       &kp E
+    &kp TAB     &kp N4      &kp N5      &kp N6      &kp MINUS       &kp RBRC    &kp LEFT    &kp DOWN    &kp RIGHT   &trans
     &trans      &kp N1      &kp N2      &kp N3      &kp KP_MULTIPLY &trans      &macro_up   &kp CAPS    &macro_down &trans
                                         &kp N0      &kp LALT        &ct RSHFT TAB &mo ADJ     
                         >;
@@ -288,10 +299,10 @@ display-name= "SYM"                               ;
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷
 
-    &kp AMPS    &trans      &kp KP_MULTIPLY &kp GRAVE &kp LBRC      &kp RBRC    &kp AMPS    &kp DLLR    &trans      &kp COLON
+    &kp AMPS    &trans      &kp KP_MULTIPLY &kp GRAVE &kp LBRC      &kp RBRC    &kp AMPS    &kp DLLR    &kp EXCL    &kp COLON
     &kp DLLR    &trans      &kp PRCNT   &kp CARET   &kp LPAR        &kp RPAR    &kp BSLH    &kp SQT     &kp DQT     &kp QMARK
     &trans      &trans      &kp AT      &kp HASH    &kp LBKT        &kp RBKT    &kp COMMA   &kp DOT     &kp FSLH    &trans
-                                        &kp LCTRL   &kp EXCL        &ct RSHFT TAB &kp LALT
+                                        &kp LCTRL   &kp LALT        &ct RSHFT TAB &mo ADJ
                         >;
             sensor-bindings = <&encoder_alt_tab &inc_dec_kp C_VOL_UP C_VOL_DN>;
                 };
@@ -314,4 +325,22 @@ display-name= "ADJ"                               ;
             sensor-bindings = <&encoder_alt_tab &inc_dec_kp C_VOL_UP C_VOL_DN>;
                 };
         };
+
+// ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+
+
+                os_layer {
+// ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+display-name= "OS"                              ;
+// ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ bindings = <
+// ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷
+
+    &trans      &trans      &trans      &trans      &trans          &trans      &trans      &trans      &trans      &trans
+    &trans      &trans      &trans      &trans      &trans          &trans      &trans      &trans      &trans      &trans
+    &trans      &trans      &trans      &trans      &trans          &trans      &trans      &trans      &trans      &trans
+                                        &trans      &trans          &trans      &trans
+                        >;
+            sensor-bindings = <&encoder_alt_tab &inc_dec_kp C_VOL_UP C_VOL_DN>;
+                };
 };
