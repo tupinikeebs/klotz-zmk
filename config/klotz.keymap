@@ -44,6 +44,13 @@
                 key-positions = <12 13>;
                 bindings = <&kp SPACE>;
             };
+
+            compatible = "zmk,combos";
+            combo_spc_2 {
+                timeout-ms = <COMBOMS>;
+                key-positions = <16 17>;
+                bindings = <&kp SPACE>;
+            };
             
             compatible = "zmk,combos";
             combo_bspc {
