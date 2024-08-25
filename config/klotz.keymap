@@ -264,7 +264,7 @@ display-name= "BASE"                              ;
 // ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷
 
     &ct LGUI Q  &ct LALT W  &ct LCTRL F &ct LSHFT P &kp B           &kp J       &ct RSHFT L &ct RCTRL U &ct RALT Y  &ct RGUI SEMI
-    &kp A       &kp R       &kp S       &kp T       &kp G           &kp M       &kp N       &kp E       &kp I       &ctl NAVI O
+    &kp A       &kp R       &kp S       &kp T       &kp G           &kp M       &kp N       &kp E       &kp I       &ctl NAV O
    &htl NAV NAV &htl SYM SYM &ctl OS DOT &kp D      &kp V           &kp K       &kp H       &kp C       &kp X       &kp Z
                                         &kp LCTRL   &kp SPACE       &ct RSHFT TAB &kp LALT
                         >;
