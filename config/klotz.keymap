@@ -265,7 +265,7 @@ display-name= "BASE"                              ;
 
     &ct LGUI Q  &ct LALT W  &ct LCTRL F &ct LSHFT P &kp B           &kp J       &ct RSHFT L &ct RCTRL U &ct RALT Y  &ct RGUI SEMI
     &ctl NAV A  &kp R       &kp S       &kp T       &kp G           &kp M       &kp N       &kp E       &kp I       &ctl NAV O
-   &htl NAV NAV &htl SYM SYM &ctl OS DOT &kp D      &kp V           &kp K       &kp H       &kp C       &kp X       &kp Z
+   &htl ADJ NAV &htl SYM SYM &ctl OS DOT &kp D      &kp V           &kp K       &kp H       &kp C       &kp X       &kp Z
                                         &kp LCTRL   &kp SPACE       &ct RSHFT TAB &kp LALT
                         >;
             sensor-bindings = <&encoder_alt_tab &inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -299,7 +299,7 @@ display-name= "SYM"                               ;
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷
 
-    &kp AMPS    &trans &ct LCTRL KP_MULTIPLY &kp GRAVE &kp LBRC     &kp RBRC    &kp AMPS    &kp DLLR    &kp EXCL    &kp COLON
+&kp AMPS     &trans &ct LCTRL KP_MULTIPLY &ct LSHFT GRAVE &kp LBRC  &kp RBRC    &kp AMPS    &kp DLLR    &kp EXCL    &kp COLON
     &kp DLLR    &trans      &kp PRCNT   &kp CARET   &kp LPAR        &kp RPAR    &kp BSLH    &kp SQT     &kp DQT     &kp QMARK
     &trans      &trans      &kp AT      &kp HASH    &kp LBKT        &kp RBKT    &kp COMMA   &kp DOT     &kp FSLH    &kp EQUAL
                                         &kp LCTRL   &kp LALT        &ct RSHFT TAB &mo ADJ
@@ -317,9 +317,9 @@ display-name= "ADJ"                               ;
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷
 
-    &sys_reset  &bt BT_CLR &out OUT_TOG &trans      &bt BT_SEL 1    &trans      &kp F7      &kp F8      &kp F9      &kp F12
-    &bootloader &bt BT_NXT  &trans      &trans      &bt BT_SEL 2    &trans      &kp F4      &kp F5      &kp F6      &kp F11  
-    &trans      &bt BT_PRV  &trans      &trans      &bt BT_SEL 3    &trans      &kp F1      &kp F2      &kp F3      &kp F10     
+    &sys_reset  &bt BT_CLR &kp LCTRL    &kp LSHFT   &bt BT_SEL 1    &trans      &kp F7      &kp F8      &kp F9      &kp F12
+    &bootloader &bt BT_NXT &out OUT_BLE &trans      &bt BT_SEL 2    &trans      &kp F4      &kp F5      &kp F6      &kp F11  
+    &trans      &bt BT_PRV &out OUT_USB &trans      &bt BT_SEL 3    &trans      &kp F1      &kp F2      &kp F3      &kp F10     
                                         &bt BT_SEL 0 &trans         &trans      &trans
                         >;
             sensor-bindings = <&encoder_alt_tab &inc_dec_kp C_VOL_UP C_VOL_DN>;
