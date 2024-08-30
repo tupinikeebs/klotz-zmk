@@ -249,6 +249,17 @@
             bindings = <&mo>, <&tog>;
             tapping-term-ms = <220>;
         };
+        
+        csl: custom_sticky_layer {
+            compatible = "zmk,behavior-sticky-key";
+            #binding-cells = <1>;
+            bindings = <&mo>;
+            release-after-ms = <1000>;
+            quick-release;
+            ignore-modifiers;
+    };
+        
+        }
     };
 
         keymap {
@@ -265,7 +276,7 @@ display-name= "BASE"                              ;
 
     &ct LGUI Q  &ct LALT W  &ct LCTRL F &ct LSHFT P &kp B           &kp J       &ct RSHFT L &ct RCTRL U &ct RALT Y  &ct RGUI SEMI
     &ctl NAV A  &kp R       &kp S       &kp T       &kp G           &kp M       &kp N       &kp E       &kp I       &ctl NAV O
-   &htl ADJ NAV &sl SYM     &ctl OS DOT &kp D      &kp V           &kp K       &kp H       &kp C       &kp X       &kp Z
+   &htl ADJ NAV &csl SYM     &ctl OS DOT &kp D      &kp V           &kp K       &kp H       &kp C       &kp X       &kp Z
                                         &kp LCTRL   &kp SPACE       &ct RSHFT TAB &kp LALT
                         >;
             sensor-bindings = <&encoder_alt_tab &inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -299,7 +310,7 @@ display-name= "SYM"                               ;
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷
 
-&kp AMPS     &trans &ct LCTRL KP_MULTIPLY &ct LSHFT GRAVE &kp LBRC  &kp RBRC    &kp AMPS    &kp DLLR    &kp EXCL    &kp COLON
+    &kp AMPS &trans &ct LCTRL KP_MULTIPLY &ct LSHFT GRAVE &kp LBRC  &kp RBRC    &kp AMPS    &kp DLLR    &kp EXCL    &kp COLON
     &kp DLLR    &trans      &kp PRCNT   &kp CARET   &kp LPAR        &kp RPAR    &kp BSLH    &kp SQT     &kp DQT     &kp QMARK
     &trans      &trans      &kp AT      &kp HASH    &kp LBKT        &kp RBKT    &kp COMMA   &kp DOT     &kp FSLH    &kp EQUAL
                                         &kp LCTRL   &kp LALT        &ct RSHFT TAB &mo ADJ
