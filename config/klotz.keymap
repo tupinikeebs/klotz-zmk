@@ -30,7 +30,7 @@
                 timeout-ms = <COMBOMS>;
                 key-positions = <0 1>;
                 bindings = <&to BASE>;
-                layers = <NAV SYM ADJ>;
+                layers = <NAV SYM ADJ OSL>;
             };
 
             compatible = "zmk,combos";
@@ -306,7 +306,7 @@ display-name= "BASE"                              ;
 
     &ct LGUI Q  &ct LALT W  &ct LCTRL F &ct LSHFT P &kp B           &kp J       &ct RSHFT L &ct RCTRL U &ct RALT Y  &ct RGUI SEMI
     &ctl NAV A  &kp R       &kp S       &kp T       &kp G           &kp M       &kp N       &kp E       &kp I       &ctl NAV O
-   &htl ADJ NAV &csl SYM    &ctl OSL DOT &kp D      &kp V           &kp K       &kp H       &kp C       &kp X       &ctl OSL Z
+   &htl ADJ NAV &csl SYM    &ctl OSL DOT &kp D      &kp V           &kp K       &kp H       &kp C       &kp X       &mo OSL
                                         &kp LCTRL   &key_repeat     &ct RSHFT TAB &kp LALT
                         >;
             sensor-bindings = <&encoder_alt_tab &inc_dec_kp C_VOL_UP C_VOL_DN>;
