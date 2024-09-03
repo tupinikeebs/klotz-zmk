@@ -377,7 +377,7 @@ display-name= "OS"                              ;
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷
 
-    &trans      &trans      &trans      &trans      &trans          &trans      &trans      &trans      &trans      &trans
+    &kp A       &trans      &trans      &trans      &trans          &trans      &trans      &trans      &trans      &trans
     &os_hk V    &os_hk C    &os_hk F    &trans      &trans          &trans      &trans      &trans      &trans      &trans
     &trans      &trans      &trans      &trans      &trans          &trans      &trans      &trans      &trans      &trans
                                         &trans      &trans          &trans      &trans
