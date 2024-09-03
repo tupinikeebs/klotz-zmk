@@ -308,9 +308,9 @@ display-name= "SYM"                               ;
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷
 
-    &kp AMPS &trans &ct LCTRL KP_MULTIPLY &ct LSHFT GRAVE &kp LBRC  &kp RBRC    &kp AMPS    &kp DLLR    &kp EXCL    &kp COLON
+    &kp AMPS &trans &ct LCTRL KP_MULTIPLY &ct LSHFT GRAVE &kp LBRC  &kp RBRC    &kp AMPS    &kp LT      &kp GT      &kp COLON
     &kp DLLR    &trans      &kp PRCNT   &kp CARET   &kp LPAR        &kp RPAR    &kp BSLH    &kp SQT     &kp DQT     &kp QMARK
-    &trans      &trans      &kp AT      &kp HASH    &kp LBKT        &kp RBKT    &kp COMMA   &kp DOT     &kp FSLH    &kp EQUAL
+    &kp EXCL    &key_repeat &kp AT      &kp HASH    &kp LBKT        &kp RBKT    &kp COMMA   &kp DOT     &kp FSLH    &kp EQUAL
                                         &kp LCTRL   &kp LALT        &ct RSHFT TAB &mo ADJ
                         >;
             sensor-bindings = <&encoder_alt_tab &inc_dec_kp C_VOL_UP C_VOL_DN>;
