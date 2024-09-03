@@ -377,7 +377,7 @@ display-name= "OS"                              ;
 // ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷
 
     &trans      &trans      &trans      &trans      &trans          &trans      &trans      &trans      &trans      &trans
-    &trans      &os_hk V    &os_hk C    &os_hv F    &trans          &trans      &trans      &trans      &trans      &trans
+    &trans      &os_hk V    &os_hk C    &os_hk F    &trans          &trans      &trans      &trans      &trans      &trans
     &trans      &trans      &trans      &trans      &trans          &trans      &trans      &trans      &trans      &trans
                                         &trans      &trans          &trans      &trans
                         >;
