@@ -255,7 +255,7 @@
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings
-                = <&macro_tap &kp m>
+                = <&macro_tap &kp M>
                 , <&macro_press &kp LSHFT>
                 , <&macro_param_1to1>
                 , <&macro_tap &kp MACRO_PLACEHOLDER>
