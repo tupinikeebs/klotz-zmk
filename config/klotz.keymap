@@ -7,7 +7,8 @@
 #define NAV  1
 #define SYM  2
 #define ADJ  3
-#define OSL  4
+#define JMP  4
+#define OSL  5
 
 #define COMBOMS 25
 
@@ -17,6 +18,7 @@
 
 / {
     combos {
+        // BASE
             compatible = "zmk,combos";
             combo_esc {
                 timeout-ms = <COMBOMS>;
@@ -33,6 +35,7 @@
                 layers = <NAV SYM ADJ OSL>;
             };
 
+            // GLOBAL
             compatible = "zmk,combos";
             combo_lgui {
                 timeout-ms = <COMBOMS>;
@@ -247,6 +250,41 @@
                 , <&macro_release &kp LSHFT>
                 ;
         };
+        
+        m_set: m_set {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings
+                = <&macro_tap &kp m>
+                , <&macro_press &kp LSHFT>
+                , <&macro_param_1to1>
+                , <&macro_tap &kp MACRO_PLACEHOLDER>
+                , <&macro_release &kp LSHFT>
+                ;
+        };
+
+        m_jmp: m_jmp {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings
+                = <&macro_tap &kp GRAVE>
+                , <&macro_press &kp LSHFT>
+                , <&macro_param_1to1>
+                , <&macro_tap &kp MACRO_PLACEHOLDER>
+                , <&macro_release &kp LSHFT>
+                ;
+        };
+
+        m_paste: m_paste {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings
+                = <&macro_tap &kp DQT>
+                , <&macro_param_1to1>
+                , <&macro_tap &kp MACRO_PLACEHOLDER>
+                , <&macro_tap &kp P>
+                ;
+        };
     };
 
     behaviors {
@@ -305,7 +343,7 @@ display-name= "BASE"                              ;
 // ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷
 
     &ct LGUI Q  &ct LALT W  &ct LCTRL F &ct LSHFT P &kp B           &kp J       &ct RSHFT L &ct RCTRL U &ct RALT Y  &ct RGUI SEMI
-    &ctl NAV A  &kp R       &kp S       &kp T       &kp G           &kp M       &kp N       &kp E       &kp I       &ctl NAV O
+    &ctl NAV A  &kp R       &kp S       &kp T       &kp G           &kp M       &kp N       &kp E       &ctl JMP I  &ctl NAV O
    &htl ADJ NAV &csl SYM    &ctl OSL DOT &kp D      &kp V           &kp K       &kp H       &kp C       &kp X       &ctl OSL Z
                                         &kp LCTRL   &key_repeat     &ct RSHFT TAB &kp LALT
                         >;
@@ -365,6 +403,25 @@ display-name= "ADJ"                               ;
                         >;
             sensor-bindings = <&encoder_alt_tab &inc_dec_kp C_VOL_UP C_VOL_DN>;
                 };
+                
+// ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+
+
+                jump_layer {
+// ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+display-name= "JMP"                              ;
+// ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+ bindings = <
+// ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷
+
+    &m_set A    &m_jmp A    &trans      &m_paste 0  &trans          &trans      &trans      &trans      &trans      &trans
+    &m_set B    &m_jmp B    &trans      &trans      &trans          &trans      &trans      &trans      &trans      &trans
+    &m_set C    &m_jmp C    &trans      &trans      &trans          &trans      &trans      &trans      &trans      &trans
+                                        &trans      &trans          &trans      &trans
+                        >;
+            sensor-bindings = <&encoder_alt_tab &inc_dec_kp C_VOL_UP C_VOL_DN>;
+                };
+        };
 
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
