@@ -70,6 +70,13 @@
                 key-positions = <8 9>;
                 bindings = <&kp DEL>;
             };
+            
+            compatible = "zmk,combos";
+            combo_sticky_shift {
+                timeout-ms = <COMBOMS>;
+                key-positions = <10 11>;
+                bindings = <&sk LSHFT>;
+            };
 
             compatible = "zmk,combos";
             combo_ret {
