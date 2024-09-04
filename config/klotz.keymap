@@ -414,14 +414,13 @@ display-name= "JMP"                              ;
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷
 
-    &m_set A    &m_jmp A    &trans      &m_paste 0  &trans          &trans      &trans      &trans      &trans      &trans
+    &m_set A    &m_jmp A    &trans      &m_paste N0 &trans          &trans      &trans      &trans      &trans      &trans
     &m_set B    &m_jmp B    &trans      &trans      &trans          &trans      &trans      &trans      &trans      &trans
     &m_set C    &m_jmp C    &trans      &trans      &trans          &trans      &trans      &trans      &trans      &trans
                                         &trans      &trans          &trans      &trans
                         >;
             sensor-bindings = <&encoder_alt_tab &inc_dec_kp C_VOL_UP C_VOL_DN>;
                 };
-        };
 
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
