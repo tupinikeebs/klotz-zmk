@@ -75,7 +75,7 @@
             combo_sticky_shift {
                 timeout-ms = <COMBOMS>;
                 key-positions = <10 11>;
-                bindings = <&sk LSHFT>;
+                bindings = <&skq LSHFT>;
             };
 
             compatible = "zmk,combos";
@@ -342,10 +342,19 @@
             compatible = "zmk,behavior-sticky-key";
             #binding-cells = <1>;
             bindings = <&mo>;
-            release-after-ms = <1000>;
+            release-after-ms = <2000>;
             quick-release;
             ignore-modifiers;
         };
+
+        skq: sticky_key_quick_release {
+            compatible = "zmk,behavior-sticky-key";
+            #binding-cells = <1>;
+            bindings = <&kp>;
+            release-after-ms = <2000>;
+            quick-release;
+            ignore-modifiers;
+      };
     };
 
         keymap {
