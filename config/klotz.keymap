@@ -292,6 +292,17 @@
                 , <&macro_tap &kp P>
                 ;
         };
+
+        m_dkp: m_dkp {
+            compatible = "zmk,behavior-macro-two-param";
+            #binding-cells = <2>;
+            bindings
+                = <&macro_param_1to1>
+                , <&macro_tap &kp MACRO_PLACEHOLDER>
+                , <&macro_param_2to1>
+                , <&macro_tap &kp MACRO_PLACEHOLDER>
+                ;
+        };
     };
 
     behaviors {
@@ -440,7 +451,7 @@ display-name= "OS"                              ;
 // ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷
 
     &trans      &trans      &os_hk T    &trans      &trans          &trans      &trans      &trans      &trans      &trans
-    &trans      &os_hk V    &os_hk C    &os_hk F    &trans          &trans      &trans      &trans      &trans      &trans
+    &trans      &os_hk V    &os_hk C    &os_hk F    &trans          &trans      &trans      &trans      &trans      &m_dkp I O
     &trans      &trans      &trans      &trans      &trans          &trans      &trans      &trans      &trans      &trans
                                         &trans      &trans          &trans      &trans
                         >;
