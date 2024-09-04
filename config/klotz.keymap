@@ -433,7 +433,7 @@ display-name= "JMP"                              ;
 // ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷
 
     &m_set A    &m_jmp A    &trans      &m_paste N0 &trans          &trans      &trans      &trans      &trans      &trans
-    &m_set B    &m_jmp B    &trans      &trans      &trans          &trans      &trans      &trans      &trans      &trans
+    &m_set B    &m_jmp B    &trans      &trans      &trans          &trans      &trans      &trans      &trans      &m_dkp I O
     &m_set C    &m_jmp C    &trans      &trans      &trans          &trans      &trans      &trans      &trans      &trans
                                         &trans      &trans          &trans      &trans
                         >;
@@ -451,7 +451,7 @@ display-name= "OS"                              ;
 // ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷
 
     &trans      &trans      &os_hk T    &trans      &trans          &trans      &trans      &trans      &trans      &trans
-    &trans      &os_hk V    &os_hk C    &os_hk F    &trans          &trans      &trans      &trans      &trans      &m_dkp I O
+    &trans      &os_hk V    &os_hk C    &os_hk F    &trans          &trans      &trans      &trans      &trans      &trans
     &trans      &trans      &trans      &trans      &trans          &trans      &trans      &trans      &trans      &trans
                                         &trans      &trans          &trans      &trans
                         >;
