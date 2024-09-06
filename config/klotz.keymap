@@ -460,7 +460,7 @@ display-name= "OS"                              ;
 // ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷
 
     &kp LA(F4)  &trans      &os_hk T    &os_hk H    &trans          &trans      &trans      &trans      &trans      &trans
-    &trans      &os_hk V    &os_hk C    &os_hk F    &trans          &trans      &trans      &trans      &trans      &trans
+    &os_hk A    &os_hk V    &os_hk C    &os_hk F    &trans          &trans      &trans      &trans      &trans      &trans
     &trans      &os_hk E    &trans      &trans      &trans          &trans      &trans      &trans      &trans      &trans
                                         &trans      &trans          &trans      &trans
                         >;
