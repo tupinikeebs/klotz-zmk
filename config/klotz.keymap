@@ -74,7 +74,7 @@
             compatible = "zmk,combos";
             combo_sticky_shift {
                 timeout-ms = <COMBOMS>;
-                key-positions = <10 11>;
+                key-positions = <11 12>;
                 bindings = <&skq LSHFT>;
             };
 
