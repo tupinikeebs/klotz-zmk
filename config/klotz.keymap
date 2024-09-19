@@ -372,7 +372,7 @@ display-name= "BASE"                              ;
     &ct LGUI Q  &ct LALT W  &ct LCTRL F &ct LSHFT P &kp B           &kp J       &ct RSHFT L &ct RCTRL U &ct RALT Y  &ct RGUI SEMI
     &ctl NAV A  &kp R       &kp S       &kp T       &kp G           &kp M       &kp N       &kp E       &ctl JMP I  &ctl NAV O
    &htl ADJ NAV &csl SYM    &ctl OSL DOT &kp D      &kp V           &kp K       &kp H       &kp C       &kp X       &ctl OSL Z
-                                        &skq LCTRL  &kp SPACE       &kp SPACE   &skq LSHFT
+                                        &skq LCTRL  &kp SPACE       &kp SPACE   &skq RSHFT
                         >;
             sensor-bindings = <&encoder_alt_tab &inc_dec_kp C_VOL_UP C_VOL_DN>;
                 };
@@ -390,7 +390,7 @@ display-name= "NAVI"                              ;
     &trans      &kp N7     &ct LCTRL N8 &ct LSHFT N9 &kp EQUAL      &kp LBRC    &kp B       &kp UP      &kp W       &kp E
     &kp TAB     &kp N4      &kp N5      &kp N6      &kp MINUS       &kp RBRC    &kp LEFT    &kp DOWN    &kp RIGHT   &trans
     &trans      &kp N1      &kp N2      &kp N3      &kp KP_MULTIPLY &kp DOT     &macro_up   &trans      &macro_down &trans
-                                        &kp N0      &kp SPACE       &kp SPACE   &skq LSHFT
+                                        &kp N0      &kp SPACE       &kp SPACE   &skq RSHFT
                         >;
             sensor-bindings = <&encoder_alt_tab &inc_dec_kp C_VOL_UP C_VOL_DN>;
                 };
@@ -408,7 +408,7 @@ display-name= "SYM"                               ;
     &trans   &kp LALT &ct LCTRL KP_MULTIPLY &ct LSHFT GRAVE &kp LBRC &kp RBRC   &kp AMPS    &kp LT      &kp GT      &kp COLON
     &trans      &kp DLLR    &kp PRCNT   &kp EXCL    &kp LPAR        &kp RPAR    &kp BSLH    &kp SQT     &kp DQT     &kp QMARK
     &kp CARET   &kp CAPS    &kp AT      &kp HASH    &kp LBKT        &kp RBKT    &kp COMMA   &kp DOT     &kp FSLH    &kp EQUAL
-                                        &kp LCTRL   &kp SPACE       &kp SPACE   &skq LSHFT
+                                        &kp LCTRL   &kp SPACE       &kp SPACE   &skq RSHFT
                         >;
             sensor-bindings = <&encoder_alt_tab &inc_dec_kp C_VOL_UP C_VOL_DN>;
                 };
@@ -426,7 +426,7 @@ display-name= "ADJ"                               ;
     &sys_reset  &bt BT_CLR &kp LCTRL    &kp LSHFT   &bt BT_SEL 1    &trans      &kp F7      &kp F8      &kp F9      &kp F12
     &bootloader &bt BT_NXT &out OUT_BLE &trans      &bt BT_SEL 2    &trans      &kp F4      &kp F5      &kp F6      &kp F11  
     &trans      &bt BT_PRV &out OUT_USB &trans      &bt BT_SEL 3    &trans      &kp F1      &kp F2      &kp F3      &kp F10     
-                                        &bt BT_SEL 0 &skq LALT      &skq LCTRL  &skq LSHFT
+                                        &bt BT_SEL 0 &skq LALT      &skq LCTRL  &skq RSHFT
                         >;
             sensor-bindings = <&encoder_alt_tab &inc_dec_kp C_VOL_UP C_VOL_DN>;
                 };
