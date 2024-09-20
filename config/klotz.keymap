@@ -388,7 +388,7 @@ display-name= "NAVI"                              ;
 // ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷
 
     &trans      &kp N7     &ct LCTRL N8 &ct LSHFT N9 &kp EQUAL      &kp LBRC    &kp B       &kp UP      &kp W       &kp E
-    &kp TAB     &kp N4      &kp N5      &kp N6      &kp MINUS       &kp RBRC    &kp LEFT    &kp DOWN    &kp RIGHT   &trans
+    &kp TAB     &kp N4      &kp N5      &kp N6      &kp MINUS       &kp RBRC    &kp LEFT    &kp DOWN    &kp RIGHT   &m_dkp I O
     &trans      &kp N1      &kp N2      &kp N3      &kp KP_MULTIPLY &kp DOT     &macro_up   &trans      &macro_down &trans
                                         &kp N0      &kp SPACE       &kp SPACE   &skq RSHFT
                         >;
@@ -441,7 +441,7 @@ display-name= "JMP"                              ;
 // ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷
 
     &m_set A    &m_jmp A    &trans      &m_paste N0 &trans          &trans      &trans      &trans      &trans      &trans
-    &m_set B    &m_jmp B    &trans      &trans      &trans          &trans      &trans      &trans      &trans      &m_dkp I O
+    &m_set B    &m_jmp B    &trans      &trans      &trans          &trans      &trans      &trans      &m_dkp O I  &trans
     &m_set C    &m_jmp C    &trans      &trans      &trans          &trans      &trans      &trans      &trans      &trans
                                         &trans      &trans          &trans      &trans
                         >;
