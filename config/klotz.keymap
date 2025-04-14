@@ -415,13 +415,15 @@
             // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
             bindings = <
-&ct LGUI Q      &ct LALT W   &ct LCTRL F     &ct LSHFT P       &kp B      &kp J      &ct RSHFT L  &ct RCTRL U  &ct RALT Y  &ct RGUI SEMI
-&mt LEFT_GUI A  &mt LCTRL R  &mt LEFT_ALT S  &mt LEFT_SHIFT T  &kp G      &kp M      &kp N        &kp E        &ctl NAV I  &ctl JMP O
-&kp Z           &kp X        &kp C           &kp D             &kp V      &kp K      &kp H        &kp C        &kp X       &ctl OSL Z
+&ct ESC Q       &kp W           &kp F        &kp P             &kp B      &kp J      &kp Y              &kp U        &kp Y            &ct DOUBLE_QUOTES SINGLE_QUOTE
+&ct LEFT_GUI A  &ct LEFT_ALT R  &ct LCTRL S  &ct LEFT_SHIFT T  &kp G      &kp M      &ct RIGHT_SHIFT N  &ct RCTRL E  &ct RIGHT_ALT I  &ct RIGHT_GUI O
+&kp Z           &kp X           &kp C        &kp D             &kp V      &kp K      &kp H              &kp COMMA    &kp PERIOD       &ct QUESTION SLASH
                                              &skq LCTRL        &kp SPACE  &kp SPACE  &skq RSHFT
             >;
 
-            sensor-bindings = <&encoder_alt_tab &inc_dec_kp C_VOL_UP C_VOL_DN>;
+            sensor-bindings =
+                <&inc_dec_kp UP_ARROW DOWN_ARROW>,
+                <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
