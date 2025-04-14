@@ -415,7 +415,7 @@
             // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
             bindings = <
-&ct ESC Q       &kp W           &kp F        &kp P             &kp B      &kp J         &kp Y              &kp U        &kp Y            &ct DOUBLE_QUOTES SINGLE_QUOTE
+&ct ESC Q       &kp W           &kp F        &kp P             &kp B      &kp J         &kp L              &kp U        &kp Y            &ct DOUBLE_QUOTES SINGLE_QUOTE
 &ct LEFT_GUI A  &ct LEFT_ALT R  &ct LCTRL S  &ct LEFT_SHIFT T  &kp G      &kp M         &ct RIGHT_SHIFT N  &ct RCTRL E  &ct RIGHT_ALT I  &ct RIGHT_GUI O
 &kp Z           &kp X           &kp C        &kp D             &kp V      &kp K         &kp H              &kp COMMA    &kp PERIOD       &ct QUESTION SLASH
                                              &lt 1 ENTER       &kp SPACE  &ctl 2 ENTER  &lt 2 BACKSPACE
@@ -436,10 +436,10 @@
             // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
             bindings = <
-&trans   &kp N7  &ct LCTRL N8  &ct LSHFT N9  &kp EQUAL        &kp LBRC   &kp B       &kp UP    &kp W        &kp E
-&kp TAB  &kp N4  &kp N5        &kp N6        &kp MINUS        &kp RBRC   &kp LEFT    &kp DOWN  &kp RIGHT    &m_dkp I O
-&trans   &kp N1  &kp N2        &kp N3        &kp KP_MULTIPLY  &kp DOT    &macro_up   &trans    &macro_down  &trans
-                               &kp N0        &kp SPACE        &kp SPACE  &skq RSHFT
+&trans   &kp N7  &ct LCTRL N8  &ct LSHFT N9  &kp MINUS        &kp LBRC   &kp B       &kp UP          &kp W         &kp E
+&kp TAB  &kp N4  &kp N5        &kp N6        &kp EQUAL        &kp RBRC   &kp LEFT    &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT
+&trans   &kp N1  &kp N2        &kp N3        &kp KP_MULTIPLY  &kp DOT    &macro_up   &trans          &macro_down   &trans
+                               &trans        &kp SPACE        &kp SPACE  &skq RSHFT
             >;
 
             sensor-bindings = <&encoder_alt_tab &inc_dec_kp C_VOL_UP C_VOL_DN>;
