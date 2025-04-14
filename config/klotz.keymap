@@ -1,6 +1,6 @@
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 
 #define BASE 0
@@ -9,299 +9,341 @@
 #define ADJ  3
 #define JMP  4
 #define OSL  5
-
 #define COMBOMS 25
 
-&lt {
-     flavor = "balanced";
-};
+&lt { flavor = "balanced"; };
 
 / {
     combos {
         // BASE
-            compatible = "zmk,combos";
-            combo_esc {
-                timeout-ms = <COMBOMS>;
-                key-positions = <0 1>;
-                bindings = <&kp ESC>;
-                layers = <BASE>;
-            };
-            
-            compatible = "zmk,combos";
-            combo_to_base {
-                timeout-ms = <COMBOMS>;
-                key-positions = <0 1>;
-                bindings = <&to BASE>;
-                layers = <NAV SYM ADJ OSL>;
-            };
 
-            // GLOBAL
-            compatible = "zmk,combos";
-            combo_lgui {
-                timeout-ms = <COMBOMS>;
-                key-positions = <0 2>;
-                bindings = <&kp LGUI>;
-            };
-            
-            compatible = "zmk,combos";
-            combo_spc {
-                timeout-ms = <COMBOMS>;
-                key-positions = <12 13>;
-                bindings = <&kp SPACE>;
-            };
+        compatible = "zmk,combos";
 
-            compatible = "zmk,combos";
-            combo_spc_2 {
-                timeout-ms = <COMBOMS>;
-                key-positions = <16 17>;
-                bindings = <&kp SPACE>;
-            };
-            
-            compatible = "zmk,combos";
-            combo_bspc {
-                timeout-ms = <COMBOMS>;
-                key-positions = <3 4>;
-                bindings = <&kp BSPC>;
-            };
-            
-            compatible = "zmk,combos";
-            combo_del {
-                timeout-ms = <COMBOMS>;
-                key-positions = <8 9>;
-                bindings = <&kp DEL>;
-            };
-            
-            compatible = "zmk,combos";
-            combo_sticky_shift {
-                timeout-ms = <COMBOMS>;
-                key-positions = <11 12>;
-                bindings = <&skq LSHFT>;
-            };
+        combo_esc {
+            timeout-ms = <COMBOMS>;
+            key-positions = <0 1>;
+            bindings = <&kp ESC>;
+            layers = <BASE>;
+        };
 
-            compatible = "zmk,combos";
-            combo_ret {
-                timeout-ms = <COMBOMS>;
-                key-positions = <13 14>;
-                bindings = <&kp RET>;
-            }; 
-            
-            compatible = "zmk,combos";
-            combo_underscore {
-                timeout-ms = <COMBOMS>;
-                key-positions = <18 19>;
-                bindings = <&kp UNDERSCORE>;
-            };
-            
-            compatible = "zmk,combos";
-            combo_ctrlz {
-                timeout-ms = <COMBOMS>;
-                key-positions = <20 21>;
-                bindings
-                  = <&macro_ctrlz>;
-            };
+        compatible = "zmk,combos";
 
-            compatible = "zmk,combos";
-            combo_ctrlshftz {
-                timeout-ms = <COMBOMS>;
-                key-positions = <20 21 22>;
-                bindings
-                  = <&macro_ctrlshftz>;
-            };
+        combo_to_base {
+            timeout-ms = <COMBOMS>;
+            key-positions = <0 1>;
+            bindings = <&to BASE>;
+            layers = <NAV SYM ADJ OSL>;
+        };
 
-            compatible = "zmk,combos";
-            combo_ctrlx {
-                timeout-ms = <COMBOMS>;
-                key-positions = <21 22>;
-                bindings
-                  = <&macro_ctrlx>;
-            };
+        // GLOBAL
 
-            compatible = "zmk,combos";
-            combo_ctrlc {
-                timeout-ms = <COMBOMS>;
-                key-positions = <22 23>;
-                bindings
-                  = <&macro_ctrlc>;
-            };
-            
-           compatible = "zmk,combos";
-            combo_ctrlv {
-                timeout-ms = <COMBOMS>;
-                key-positions = <23 24>;
-                bindings
-                  = <&macro_ctrlv>;
-            };
-           
-           compatible = "zmk,combos";
-            combo_ctrls {
-                timeout-ms = <COMBOMS>;
-                key-positions = <16 18>;
-                bindings
-                  = <&macro_ctrls>;
-            };
+        compatible = "zmk,combos";
+
+        combo_lgui {
+            timeout-ms = <COMBOMS>;
+            key-positions = <0 2>;
+            bindings = <&kp LGUI>;
+        };
+
+        compatible = "zmk,combos";
+
+        combo_spc {
+            timeout-ms = <COMBOMS>;
+            key-positions = <12 13>;
+            bindings = <&kp SPACE>;
+        };
+
+        compatible = "zmk,combos";
+
+        combo_spc_2 {
+            timeout-ms = <COMBOMS>;
+            key-positions = <16 17>;
+            bindings = <&kp SPACE>;
+        };
+
+        compatible = "zmk,combos";
+
+        combo_bspc {
+            timeout-ms = <COMBOMS>;
+            key-positions = <3 4>;
+            bindings = <&kp BSPC>;
+        };
+
+        compatible = "zmk,combos";
+
+        combo_del {
+            timeout-ms = <COMBOMS>;
+            key-positions = <8 9>;
+            bindings = <&kp DEL>;
+        };
+
+        compatible = "zmk,combos";
+
+        combo_sticky_shift {
+            timeout-ms = <COMBOMS>;
+            key-positions = <11 12>;
+            bindings = <&skq LSHFT>;
+        };
+
+        compatible = "zmk,combos";
+
+        combo_ret {
+            timeout-ms = <COMBOMS>;
+            key-positions = <13 14>;
+            bindings = <&kp RET>;
+        };
+
+        compatible = "zmk,combos";
+
+        combo_underscore {
+            timeout-ms = <COMBOMS>;
+            key-positions = <18 19>;
+            bindings = <&kp UNDERSCORE>;
+        };
+
+        compatible = "zmk,combos";
+
+        combo_ctrlz {
+            timeout-ms = <COMBOMS>;
+            key-positions = <20 21>;
+            bindings = <&macro_ctrlz>;
+        };
+
+        compatible = "zmk,combos";
+
+        combo_ctrlshftz {
+            timeout-ms = <COMBOMS>;
+            key-positions = <20 21 22>;
+            bindings = <&macro_ctrlshftz>;
+        };
+
+        compatible = "zmk,combos";
+
+        combo_ctrlx {
+            timeout-ms = <COMBOMS>;
+            key-positions = <21 22>;
+            bindings = <&macro_ctrlx>;
+        };
+
+        compatible = "zmk,combos";
+
+        combo_ctrlc {
+            timeout-ms = <COMBOMS>;
+            key-positions = <22 23>;
+            bindings = <&macro_ctrlc>;
+        };
+
+        compatible = "zmk,combos";
+
+        combo_ctrlv {
+            timeout-ms = <COMBOMS>;
+            key-positions = <23 24>;
+            bindings = <&macro_ctrlv>;
+        };
+
+        compatible = "zmk,combos";
+
+        combo_ctrls {
+            timeout-ms = <COMBOMS>;
+            key-positions = <16 18>;
+            bindings = <&macro_ctrls>;
+        };
     };
 
     macros {
         macro_esc: macro_esc {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-                = <&to BASE>
-                , <&kp ESC>
-                ;
-        };        
-        
+            bindings = <&to BASE &kp ESC>;
+        };
+
         tabcw: tabcw {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-                = <&macro_tap &kp TAB>
-                ;
+            bindings = <&macro_tap>, <&kp TAB>;
         };
+
         tabccw: tabccw {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LSHFT>
-                , <&macro_tap &kp TAB>
-                , <&macro_release &kp LSHFT>
-                ;
+            bindings =
+                <&macro_press>,
+                <&kp LSHFT>,
+                <&macro_tap>,
+                <&kp TAB>,
+                <&macro_release>,
+                <&kp LSHFT>;
         };
+
         macro_ctrlz: macro_ctrlz {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LCTRL>
-                , <&macro_tap &kp Z>
-                , <&macro_release &kp LCTRL>
-                ;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp Z>,
+                <&macro_release>,
+                <&kp LCTRL>;
         };
+
         macro_ctrlshftz: macro_ctrlshftz {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LCTRL>
-                , <&macro_press &kp LSHFT>
-                , <&macro_tap &kp Z>
-                , <&macro_release &kp LCTRL>
-                , <&macro_release &kp LSHFT>
-                ;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_press>,
+                <&kp LSHFT>,
+                <&macro_tap>,
+                <&kp Z>,
+                <&macro_release>,
+                <&kp LCTRL>,
+                <&macro_release>,
+                <&kp LSHFT>;
         };
+
         macro_ctrlx: macro_ctrlx {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LCTRL>
-                , <&macro_tap &kp X>
-                , <&macro_release &kp LCTRL>
-                ;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp X>,
+                <&macro_release>,
+                <&kp LCTRL>;
         };
+
         macro_ctrlc: macro_ctrlc {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LCTRL>
-                , <&macro_tap &kp C>
-                , <&macro_release &kp LCTRL>
-                ;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp C>,
+                <&macro_release>,
+                <&kp LCTRL>;
         };
+
         macro_ctrlv: macro_ctrlv {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LCTRL>
-                , <&macro_tap &kp V>
-                , <&macro_release &kp LCTRL>
-                ;
-        }; 
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp V>,
+                <&macro_release>,
+                <&kp LCTRL>;
+        };
+
         macro_ctrls: macro_ctrls {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LCTRL>
-                , <&macro_tap &kp S>
-                , <&macro_release &kp LCTRL>
-                ;
-        }; 
-        
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp S>,
+                <&macro_release>,
+                <&kp LCTRL>;
+        };
+
         macro_up: macro_up {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LCTRL>
-                , <&macro_tap &kp U>
-                , <&macro_release &kp LCTRL>
-                ;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp U>,
+                <&macro_release>,
+                <&kp LCTRL>;
         };
+
         macro_down: macro_down {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LCTRL>
-                , <&macro_tap &kp D>
-                , <&macro_release &kp LCTRL>
-                ;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp D>,
+                <&macro_release>,
+                <&kp LCTRL>;
         };
-        
+
         os_hk: os_hk {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings
-                = <&macro_press &kp LALT>
-                , <&macro_press &kp LGUI>
-                , <&macro_press &kp LSHFT>
-                , <&macro_param_1to1>
-                , <&macro_tap &kp MACRO_PLACEHOLDER>
-                , <&macro_release &kp LALT>
-                , <&macro_release &kp LGUI>
-                , <&macro_release &kp LSHFT>
-                ;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_press>,
+                <&kp LGUI>,
+                <&macro_press>,
+                <&kp LSHFT &macro_param_1to1>,
+                <&macro_tap>,
+                <&kp MACRO_PLACEHOLDER>,
+                <&macro_release>,
+                <&kp LALT>,
+                <&macro_release>,
+                <&kp LGUI>,
+                <&macro_release>,
+                <&kp LSHFT>;
         };
-        
+
         m_set: m_set {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings
-                = <&macro_tap &kp M>
-                , <&macro_press &kp LSHFT>
-                , <&macro_param_1to1>
-                , <&macro_tap &kp MACRO_PLACEHOLDER>
-                , <&macro_release &kp LSHFT>
-                ;
+            bindings =
+                <&macro_tap>,
+                <&kp M>,
+                <&macro_press>,
+                <&kp LSHFT &macro_param_1to1>,
+                <&macro_tap>,
+                <&kp MACRO_PLACEHOLDER>,
+                <&macro_release>,
+                <&kp LSHFT>;
         };
 
         m_jmp: m_jmp {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings
-                = <&macro_tap &kp GRAVE>
-                , <&macro_press &kp LSHFT>
-                , <&macro_param_1to1>
-                , <&macro_tap &kp MACRO_PLACEHOLDER>
-                , <&macro_release &kp LSHFT>
-                ;
+            bindings =
+                <&macro_tap>,
+                <&kp GRAVE>,
+                <&macro_press>,
+                <&kp LSHFT &macro_param_1to1>,
+                <&macro_tap>,
+                <&kp MACRO_PLACEHOLDER>,
+                <&macro_release>,
+                <&kp LSHFT>;
         };
 
         m_paste: m_paste {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings
-                = <&macro_tap &kp DQT>
-                , <&macro_param_1to1>
-                , <&macro_tap &kp MACRO_PLACEHOLDER>
-                , <&macro_tap &kp P>
-                ;
+            bindings =
+                <&macro_tap>,
+                <&kp DQT &macro_param_1to1>,
+                <&macro_tap>,
+                <&kp MACRO_PLACEHOLDER>,
+                <&macro_tap>,
+                <&kp P>;
         };
 
         m_dkp: m_dkp {
             compatible = "zmk,behavior-macro-two-param";
             #binding-cells = <2>;
-            bindings
-                = <&macro_param_1to1>
-                , <&macro_tap &kp MACRO_PLACEHOLDER>
-                , <&macro_param_2to1>
-                , <&macro_tap &kp MACRO_PLACEHOLDER>
-                ;
+            bindings =
+                <&macro_param_1to1>,
+                <&macro_tap>,
+                <&kp MACRO_PLACEHOLDER &macro_param_2to1>,
+                <&macro_tap>,
+                <&kp MACRO_PLACEHOLDER>;
         };
     };
 
@@ -317,15 +359,17 @@
             #binding-cells = <2>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
+
             tapping-term-ms = <220>;
             quick-tap-ms = <175>;
         };
-        
+
         ctl: custom_tap_layer {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
             bindings = <&mo>, <&kp>;
+
             tapping-term-ms = <220>;
             quick-tap-ms = <175>;
         };
@@ -335,9 +379,10 @@
             #binding-cells = <2>;
             flavor = "balanced";
             bindings = <&mo>, <&tog>;
+
             tapping-term-ms = <220>;
         };
-        
+
         csl: custom_sticky_layer {
             compatible = "zmk,behavior-sticky-key";
             #binding-cells = <1>;
@@ -354,117 +399,124 @@
             release-after-ms = <2000>;
             quick-release;
             ignore-modifiers;
-      };
+        };
     };
 
-        keymap {
-                compatible = "zmk,keymap";
-// ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+    keymap {
+        compatible = "zmk,keymap";
 
+        // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-                base_layer {
-// ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-display-name= "BASE"                              ;
-// ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
- bindings = <
-// ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷
+        base_layer {
+            // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 
-    &ct LGUI Q  &ct LALT W  &ct LCTRL F &ct LSHFT P &kp B           &kp J       &ct RSHFT L &ct RCTRL U &ct RALT Y  &ct RGUI SEMI
-    &kp A       &ctl NAV R  &kp S       &kp T       &kp G           &kp M       &kp N       &kp E       &ctl NAV I  &ctl JMP O
-   &htl ADJ NAV &csl SYM    &ctl OSL DOT &kp D      &kp V           &kp K       &kp H       &kp C       &kp X       &ctl OSL Z
-                                        &skq LCTRL  &kp SPACE       &kp SPACE   &skq RSHFT
-                        >;
+            display-name = "BASE";
+
+            // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+            bindings = <
+&ct LGUI Q      &ct LALT W   &ct LCTRL F     &ct LSHFT P       &kp B      &kp J      &ct RSHFT L  &ct RCTRL U  &ct RALT Y  &ct RGUI SEMI
+&mt LEFT_GUI A  &mt LCTRL R  &mt LEFT_ALT S  &mt LEFT_SHIFT T  &kp G      &kp M      &kp N        &kp E        &ctl NAV I  &ctl JMP O
+&kp Z           &kp X        &kp C           &kp D             &kp V      &kp K      &kp H        &kp C        &kp X       &ctl OSL Z
+                                             &skq LCTRL        &kp SPACE  &kp SPACE  &skq RSHFT
+            >;
+
             sensor-bindings = <&encoder_alt_tab &inc_dec_kp C_VOL_UP C_VOL_DN>;
-                };
-
-// ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-
-
-                nav_layer {
-// ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-display-name= "NAVI"                              ;
-// ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
- bindings = <
-// ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷
-
-    &trans      &kp N7     &ct LCTRL N8 &ct LSHFT N9 &kp EQUAL      &kp LBRC    &kp B       &kp UP      &kp W       &kp E
-    &kp TAB     &kp N4      &kp N5      &kp N6      &kp MINUS       &kp RBRC    &kp LEFT    &kp DOWN    &kp RIGHT   &m_dkp I O
-    &trans      &kp N1      &kp N2      &kp N3      &kp KP_MULTIPLY &kp DOT     &macro_up   &trans      &macro_down &trans
-                                        &kp N0      &kp SPACE       &kp SPACE   &skq RSHFT
-                        >;
-            sensor-bindings = <&encoder_alt_tab &inc_dec_kp C_VOL_UP C_VOL_DN>;
-                };
-
-// ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-
-
-                sim_layer {
-// ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-display-name= "SYM"                               ;
-// ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
- bindings = <
-// ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷
-
-    &trans   &kp LALT &ct LCTRL KP_MULTIPLY &ct LSHFT GRAVE &kp LBRC &kp RBRC   &kp AMPS    &kp LT      &kp GT      &kp COLON
-    &trans      &kp DLLR    &kp PRCNT   &kp EXCL    &kp LPAR        &kp RPAR    &kp BSLH    &kp SQT     &kp DQT     &kp QMARK
-    &kp CARET   &kp CAPS    &kp AT      &kp HASH    &kp LBKT        &kp RBKT    &kp COMMA   &kp DOT     &kp FSLH    &kp EQUAL
-                                        &kp LCTRL   &kp SPACE       &kp SPACE   &skq RSHFT
-                        >;
-            sensor-bindings = <&encoder_alt_tab &inc_dec_kp C_VOL_UP C_VOL_DN>;
-                };
-
-// ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-
-
-                adjust_layer {
-// ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-display-name= "ADJ"                               ;
-// ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
- bindings = <
-// ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷
-
-    &sys_reset  &bt BT_CLR &kp LCTRL    &kp LSHFT   &bt BT_SEL 1    &trans      &kp F7      &kp F8      &kp F9      &kp F12
-    &bootloader &bt BT_NXT &out OUT_BLE &trans      &bt BT_SEL 2    &trans      &kp F4      &kp F5      &kp F6      &kp F11  
-    &trans      &bt BT_PRV &out OUT_USB &trans      &bt BT_SEL 3    &trans      &kp F1      &kp F2      &kp F3      &kp F10     
-                                        &bt BT_SEL 0 &skq LALT      &skq LCTRL  &skq RSHFT   
-                        >;
-            sensor-bindings = <&encoder_alt_tab &inc_dec_kp C_VOL_UP C_VOL_DN>;
-                };
-                
-// ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-
-
-                jump_layer {
-// ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-display-name= "JMP"                              ;
-// ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
- bindings = <
-// ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷
-
-    &m_set A    &m_jmp A    &trans      &m_paste N0 &trans          &trans      &trans      &trans      &trans      &trans
-    &m_set B    &m_jmp B    &trans      &trans      &trans          &trans      &trans      &trans      &m_dkp O I  &trans
-    &m_set C    &m_jmp C    &trans      &trans      &trans          &trans      &trans      &trans      &trans      &trans
-                                        &trans      &trans          &trans      &trans
-                        >;
-            sensor-bindings = <&encoder_alt_tab &inc_dec_kp C_VOL_UP C_VOL_DN>;
-                };
-
-// ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-
-
-                os_layer {
-// ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-display-name= "OS"                              ;
-// ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
- bindings = <
-// ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷
-
-    &kp LA(F4)  &trans      &os_hk T    &os_hk H    &trans          &trans      &trans      &trans      &trans      &trans
-    &os_hk A    &os_hk V    &os_hk C    &os_hk F    &trans          &trans      &trans      &trans      &trans      &trans
-    &trans      &os_hk E    &trans      &trans      &trans          &trans      &trans      &trans      &trans      &trans
-                                        &trans      &trans          &trans      &trans
-                        >;
-            sensor-bindings = <&encoder_alt_tab &inc_dec_kp C_VOL_UP C_VOL_DN>;
-                };
         };
+
+        // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+
+        nav_layer {
+            // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+
+            display-name = "NAVI";
+
+            // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+            bindings = <
+&trans   &kp N7  &ct LCTRL N8  &ct LSHFT N9  &kp EQUAL        &kp LBRC   &kp B       &kp UP    &kp W        &kp E
+&kp TAB  &kp N4  &kp N5        &kp N6        &kp MINUS        &kp RBRC   &kp LEFT    &kp DOWN  &kp RIGHT    &m_dkp I O
+&trans   &kp N1  &kp N2        &kp N3        &kp KP_MULTIPLY  &kp DOT    &macro_up   &trans    &macro_down  &trans
+                               &kp N0        &kp SPACE        &kp SPACE  &skq RSHFT
+            >;
+
+            sensor-bindings = <&encoder_alt_tab &inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
+
+        // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+
+        sim_layer {
+            // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+
+            display-name = "SYM";
+
+            // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+            bindings = <
+&trans     &kp LALT  &ct LCTRL KP_MULTIPLY  &ct LSHFT GRAVE  &kp LBRC   &kp RBRC   &kp AMPS    &kp LT   &kp GT    &kp COLON
+&trans     &kp DLLR  &kp PRCNT              &kp EXCL         &kp LPAR   &kp RPAR   &kp BSLH    &kp SQT  &kp DQT   &kp QMARK
+&kp CARET  &kp CAPS  &kp AT                 &kp HASH         &kp LBKT   &kp RBKT   &kp COMMA   &kp DOT  &kp FSLH  &kp EQUAL
+                                            &kp LCTRL        &kp SPACE  &kp SPACE  &skq RSHFT
+            >;
+
+            sensor-bindings = <&encoder_alt_tab &inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
+
+        // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+
+        adjust_layer {
+            // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+
+            display-name = "ADJ";
+
+            // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+            bindings = <
+&sys_reset   &bt BT_CLR  &kp LCTRL     &kp LSHFT     &bt BT_SEL 1  &trans      &kp F7      &kp F8  &kp F9  &kp F12
+&bootloader  &bt BT_NXT  &out OUT_BLE  &trans        &bt BT_SEL 2  &trans      &kp F4      &kp F5  &kp F6  &kp F11
+&trans       &bt BT_PRV  &out OUT_USB  &trans        &bt BT_SEL 3  &trans      &kp F1      &kp F2  &kp F3  &kp F10
+                                       &bt BT_SEL 0  &skq LALT     &skq LCTRL  &skq RSHFT
+            >;
+
+            sensor-bindings = <&encoder_alt_tab &inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
+
+        // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+
+        jump_layer {
+            // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+
+            display-name = "JMP";
+
+            // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+            bindings = <
+&m_set A  &m_jmp A  &trans  &m_paste N0  &trans  &trans  &trans  &trans  &trans      &trans
+&m_set B  &m_jmp B  &trans  &trans       &trans  &trans  &trans  &trans  &m_dkp O I  &trans
+&m_set C  &m_jmp C  &trans  &trans       &trans  &trans  &trans  &trans  &trans      &trans
+                            &trans       &trans  &trans  &trans
+            >;
+
+            sensor-bindings = <&encoder_alt_tab &inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
+
+        // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+
+        os_layer {
+            // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+
+            display-name = "OS";
+
+            // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+            bindings = <
+&kp LA(F4)  &trans    &os_hk T  &os_hk H  &trans  &trans  &trans  &trans  &trans  &trans
+&os_hk A    &os_hk V  &os_hk C  &os_hk F  &trans  &trans  &trans  &trans  &trans  &trans
+&trans      &os_hk E  &trans    &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                                &trans    &trans  &trans  &trans
+            >;
+
+            sensor-bindings = <&encoder_alt_tab &inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
+    };
 };
