@@ -418,7 +418,7 @@
 &ct ESC Q       &kp W           &kp F        &kp P             &kp B      &kp J         &kp Y              &kp U        &kp Y            &ct DOUBLE_QUOTES SINGLE_QUOTE
 &ct LEFT_GUI A  &ct LEFT_ALT R  &ct LCTRL S  &ct LEFT_SHIFT T  &kp G      &kp M         &ct RIGHT_SHIFT N  &ct RCTRL E  &ct RIGHT_ALT I  &ct RIGHT_GUI O
 &kp Z           &kp X           &kp C        &kp D             &kp V      &kp K         &kp H              &kp COMMA    &kp PERIOD       &ct QUESTION SLASH
-                                             &skq LCTRL        &kp SPACE  &ctl 2 ENTER  &skq BACKSPACE
+                                             &lt 1 ENTER       &kp SPACE  &ctl 2 ENTER  &lt 2 BACKSPACE
             >;
 
             sensor-bindings =
