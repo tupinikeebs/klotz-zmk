@@ -436,10 +436,10 @@
             // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
             bindings = <
-&trans   &kp N7  &ct LCTRL N8  &ct LSHFT N9  &kp MINUS        &kp LBRC   &kp B       &kp UP          &kp W         &kp E
-&kp TAB  &kp N4  &kp N5        &kp N6        &kp EQUAL        &kp RBRC   &kp LEFT    &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT
-&trans   &kp N1  &kp N2        &kp N3        &kp KP_MULTIPLY  &kp DOT    &macro_up   &trans          &macro_down   &trans
-                               &trans        &kp SPACE        &kp SPACE  &skq RSHFT
+&kp TAB        &kp N7  &ct LCTRL N8  &ct LSHFT N9  &kp MINUS        &kp LBRC   &kp B       &kp UP          &kp W         &kp E
+&kp SEMICOLON  &kp N4  &kp N5        &kp N6        &kp EQUAL        &kp RBRC   &kp LEFT    &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT
+&trans         &kp N1  &kp N2        &kp N3        &kp KP_MULTIPLY  &kp DOT    &macro_up   &trans          &macro_down   &trans
+                                     &trans        &kp SPACE        &kp SPACE  &skq RSHFT
             >;
 
             sensor-bindings = <&encoder_alt_tab &inc_dec_kp C_VOL_UP C_VOL_DN>;
