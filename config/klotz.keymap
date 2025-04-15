@@ -441,7 +441,7 @@
 &kp ESC        &kp N7  &ct LCTRL N8  &ct LSHFT N9                    &kp MINUS        &kp LBRC   &kp NUMBER_0     &kp UNDER  &kp PIPE       &trans
 &kp SEMICOLON  &kp N4  &kp N5        &kp N6                          &kp EQUAL        &kp RBRC   &kp RIGHT_SHIFT  &kp RCTRL  &kp RIGHT_ALT  &kp RIGHT_GUI
 &trans         &kp N1  &kp N2        &kp N3                          &kp KP_MULTIPLY  &kp DOT    &macro_up        &trans     &macro_down    &trans
-                                     &ct RIGHT_PARENTHESIS NUMBER_0  &kp SPACE        &kp SPACE  &skq RSHFT
+                                     &ct RIGHT_PARENTHESIS NUMBER_0  &kp UNDER        &kp SPACE  &skq RSHFT
             >;
 
             sensor-bindings = <&encoder_alt_tab &inc_dec_kp C_VOL_UP C_VOL_DN>;
