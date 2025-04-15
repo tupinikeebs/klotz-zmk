@@ -1,7 +1,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/outputs.h>
 
 #define BASE 0
 #define NAV  1
@@ -28,21 +27,15 @@
 
         compatible = "zmk,combos";
 
-        combo_to_base {
-            timeout-ms = <COMBOMS>;
-            key-positions = <0 1>;
-            bindings = <&to 0>;
-            layers = <2 3 4 6>;
-        };
-
         // GLOBAL
 
         compatible = "zmk,combos";
 
-        combo_lgui {
+        combo_Scroll {
             timeout-ms = <COMBOMS>;
-            key-positions = <0 2>;
-            bindings = <&kp LGUI>;
+            key-positions = <27 28>;
+            bindings = <&to 5>;
+            layers = <5>;
         };
 
         compatible = "zmk,combos";
@@ -360,7 +353,7 @@
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
 
-            tapping-term-ms = <220>;
+            tapping-term-ms = <200>;
             quick-tap-ms = <175>;
         };
 
@@ -418,7 +411,7 @@
 &kp Q           &kp W           &kp F        &kp P             &kp B      &kp J         &kp L              &kp U        &kp Y            &ct DOUBLE_QUOTES SINGLE_QUOTE
 &ct LEFT_GUI A  &ct LEFT_ALT R  &ct LCTRL S  &ct LEFT_SHIFT T  &kp G      &kp M         &ct RIGHT_SHIFT N  &ct RCTRL E  &ct RIGHT_ALT I  &ct RIGHT_GUI O
 &kp Z           &kp X           &kp C        &kp D             &kp V      &kp K         &kp H              &kp COMMA    &kp PERIOD       &ct QUESTION SLASH
-                                             &lt 2 SPACE       &lt 2 TAB  &ctl 3 ENTER  &lt 1 BACKSPACE
+                                             &lt 1 SPACE       &lt 2 TAB  &ctl 3 ENTER  &lt 2 BACKSPACE
             >;
 
             sensor-bindings =
@@ -426,10 +419,10 @@
                 <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
-        num_layer {
+        nav_layer {
             bindings = <
 &ct LEFT_BRACE LEFT_BRACKET  &ct AMPERSAND N7          &ct ASTRK N8          &ct LEFT_PARENTHESIS N9   &ct RIGHT_BRACE RIGHT_BRACKET  &macro_ctrlshftz  &macro_ctrlv    &macro_ctrlc    &macro_ctrlv  &macro_ctrlz
-&ct LEFT_GUI SEMICOLON       &ct LEFT_ALT NUMBER_4     &ct LCTRL N5          &ct LEFT_SHIFT NUMBER_6   &trans                         &caps_word        &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW
+&kp RGUI                     &kp LALT                  &kp LCTRL             &kp LSHFT                 &trans                         &caps_word        &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW
 &ct TILDE GRAVE              &ct EXCLAMATION NUMBER_1  &ct AT_SIGN NUMBER_2  &ct HASH NUMBER_3         &trans                         &kp INSERT        &kp HOME        &kp PAGE_DOWN   &kp PG_UP     &kp END
                                                                              &ct RIGHT_PARENTHESIS N0  &trans                         &kp SPACE         &kp BACKSPACE
             >;
@@ -437,17 +430,17 @@
             sensor-bindings = <&inc_dec_kp 0 0>;
         };
 
-        nav_layer {
+        num_layer {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 
-            display-name = "NAVI";
+            display-name = "num";
 
             // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
             bindings = <
-&kp TAB        &kp N7  &ct LCTRL N8  &ct LSHFT N9  &kp MINUS        &kp LBRC   &kp B       &kp UP          &kp W         &kp E
-&kp SEMICOLON  &kp N4  &kp N5        &kp N6        &kp EQUAL        &kp RBRC   &kp LEFT    &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT
-&trans         &kp N1  &kp N2        &kp N3        &kp KP_MULTIPLY  &kp DOT    &macro_up   &trans          &macro_down   &trans
+&kp ESC        &kp N7  &ct LCTRL N8  &ct LSHFT N9  &kp MINUS        &kp LBRC   &kp NUMBER_0     &kp UNDER  &kp PIPE       &trans
+&kp SEMICOLON  &kp N4  &kp N5        &kp N6        &kp EQUAL        &kp RBRC   &kp RIGHT_SHIFT  &kp RCTRL  &kp RIGHT_ALT  &kp RIGHT_GUI
+&trans         &kp N1  &kp N2        &kp N3        &kp KP_MULTIPLY  &kp DOT    &macro_up        &trans     &macro_down    &trans
                                      &trans        &kp SPACE        &kp SPACE  &skq RSHFT
             >;
 
@@ -479,30 +472,26 @@
             // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
             bindings = <
-&sys_reset   &bt BT_CLR  &kp LCTRL     &kp LSHFT     &bt BT_SEL 1  &trans      &kp F7      &kp F8  &kp F9  &kp F12
-&bootloader  &bt BT_NXT  &out OUT_BLE  &trans        &bt BT_SEL 2  &trans      &kp F4      &kp F5  &kp F6  &kp F11
-&trans       &bt BT_PRV  &out OUT_USB  &trans        &bt BT_SEL 3  &trans      &kp F1      &kp F2  &kp F3  &kp F10
-                                       &bt BT_SEL 0  &skq LALT     &skq LCTRL  &skq RSHFT
+&sys_reset    &kp F5        &kp F6     &kp F7          &kp F8     &kp F9      &kp F10       &kp F11       &kp F12       &kp BSPC
+&kp LEFT_GUI  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &trans     &trans      &bt BT_NXT    &bt BT_PRV    &trans        &macro_esc
+&bootloader   &kp F1        &kp F2     &kp F3          &kp F4     &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3
+                                       &trans          &skq LALT  &skq LCTRL  &skq RSHFT
             >;
 
             sensor-bindings = <&encoder_alt_tab &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
-        jump_layer {
-            // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-
-            display-name = "JMP";
-
-            // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
-
+        scroll_layer {
             bindings = <
-&m_set A  &m_jmp A  &trans  &m_paste N0  &trans  &trans  &trans  &trans  &trans      &trans
-&m_set B  &m_jmp B  &trans  &trans       &trans  &trans  &trans  &trans  &m_dkp O I  &trans
-&m_set C  &m_jmp C  &trans  &trans       &trans  &trans  &trans  &trans  &trans      &trans
-                            &trans       &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans  &trans
             >;
 
-            sensor-bindings = <&encoder_alt_tab &inc_dec_kp C_VOL_UP C_VOL_DN>;
+            sensor-bindings =
+                <&inc_dec_kp PAGE_DOWN PG_UP>,
+                <&inc_dec_kp C_NEXT K_PREV>;
         };
 
         os_layer {
@@ -520,15 +509,6 @@
             >;
 
             sensor-bindings = <&encoder_alt_tab &inc_dec_kp C_VOL_UP C_VOL_DN>;
-        };
-
-        layer_6 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans  &trans
-            >;
         };
     };
 };
