@@ -34,7 +34,7 @@
         combo_Scroll {
             timeout-ms = <COMBOMS>;
             key-positions = <27 28>;
-            bindings = <&to 5>;
+            bindings = <&tog 5>;
             layers = <5>;
         };
 
@@ -415,7 +415,7 @@
             >;
 
             sensor-bindings =
-                <&inc_dec_kp UP_ARROW DOWN_ARROW>,
+                <&inc_dec_kp DOWN UP_ARROW>,
                 <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
