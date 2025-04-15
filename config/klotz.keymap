@@ -23,7 +23,7 @@
             timeout-ms = <COMBOMS>;
             key-positions = <0 1>;
             bindings = <&kp ESC>;
-            layers = <BASE>;
+            layers = <0>;
         };
 
         compatible = "zmk,combos";
@@ -31,8 +31,8 @@
         combo_to_base {
             timeout-ms = <COMBOMS>;
             key-positions = <0 1>;
-            bindings = <&to BASE>;
-            layers = <NAV SYM ADJ OSL>;
+            bindings = <&to 0>;
+            layers = <2 3 4 6>;
         };
 
         // GLOBAL
@@ -154,7 +154,7 @@
         macro_esc: macro_esc {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to BASE &kp ESC>;
+            bindings = <&to 0 &kp ESC>;
         };
 
         tabcw: tabcw {
@@ -418,7 +418,7 @@
 &kp Q           &kp W           &kp F        &kp P             &kp B      &kp J         &kp L              &kp U        &kp Y            &ct DOUBLE_QUOTES SINGLE_QUOTE
 &ct LEFT_GUI A  &ct LEFT_ALT R  &ct LCTRL S  &ct LEFT_SHIFT T  &kp G      &kp M         &ct RIGHT_SHIFT N  &ct RCTRL E  &ct RIGHT_ALT I  &ct RIGHT_GUI O
 &kp Z           &kp X           &kp C        &kp D             &kp V      &kp K         &kp H              &kp COMMA    &kp PERIOD       &ct QUESTION SLASH
-                                             &lt 1 ENTER       &kp SPACE  &ctl 2 ENTER  &lt 2 BACKSPACE
+                                             &lt 2 SPACE       &lt 2 TAB  &ctl 3 ENTER  &lt 1 BACKSPACE
             >;
 
             sensor-bindings =
@@ -426,7 +426,16 @@
                 <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
-        // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+        num_layer {
+            bindings = <
+&ct LEFT_BRACE LEFT_BRACKET  &ct AMPERSAND N7          &ct ASTRK N8          &ct LEFT_PARENTHESIS N9   &ct RIGHT_BRACE RIGHT_BRACKET  &macro_ctrlshftz  &macro_ctrlv    &macro_ctrlc    &macro_ctrlv  &macro_ctrlz
+&ct LEFT_GUI SEMICOLON       &ct LEFT_ALT NUMBER_4     &ct LCTRL N5          &ct LEFT_SHIFT NUMBER_6   &trans                         &caps_word        &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW
+&ct TILDE GRAVE              &ct EXCLAMATION NUMBER_1  &ct AT_SIGN NUMBER_2  &ct HASH NUMBER_3         &trans                         &kp INSERT        &kp HOME        &kp PAGE_DOWN   &kp PG_UP     &kp END
+                                                                             &ct RIGHT_PARENTHESIS N0  &trans                         &kp SPACE         &kp BACKSPACE
+            >;
+
+            sensor-bindings = <&inc_dec_kp 0 0>;
+        };
 
         nav_layer {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
@@ -445,8 +454,6 @@
             sensor-bindings = <&encoder_alt_tab &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
-        // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-
         sim_layer {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 
@@ -455,16 +462,14 @@
             // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
             bindings = <
-&trans     &kp LALT  &ct LCTRL KP_MULTIPLY  &ct LSHFT GRAVE  &kp LBRC   &kp RBRC   &kp AMPS    &kp LT   &kp GT    &kp SEMI
-&trans     &kp DLLR  &kp PRCNT              &kp CARET        &kp LPAR   &kp RPAR   &kp BSLH    &kp SQT  &kp DQT   &kp QMARK
-&kp CARET  &kp EXCL  &kp AT                 &kp HASH         &kp LBKT   &kp RBKT   &kp COMMA   &kp DOT  &kp FSLH  &kp EQUAL
-                                            &kp LCTRL        &kp SPACE  &kp SPACE  &skq RSHFT
+&kp LEFT_BRACE  &kp AMPERSAND  &ct LCTRL KP_MULTIPLY  &ct RIGHT_PARENTHESIS LEFT_PARENTHESIS  &kp RIGHT_BRACE  &trans     &trans           &trans     &trans         &trans
+&kp COLON       &kp DLLR       &kp PRCNT              &kp CARET                               &ct EQUAL PLUS   &trans     &kp RIGHT_SHIFT  &kp RCTRL  &kp RIGHT_ALT  &kp RIGHT_GUI
+&kp TILDE       &kp EXCL       &kp AT                 &kp HASH                                &kp PIPE         &trans     &trans           &trans     &trans         &trans
+                                                      &kp RIGHT_PARENTHESIS                   &kp SPACE        &kp SPACE  &skq RSHFT
             >;
 
             sensor-bindings = <&encoder_alt_tab &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
-
-        // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
         adjust_layer {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
@@ -483,8 +488,6 @@
             sensor-bindings = <&encoder_alt_tab &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
-        // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-
         jump_layer {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 
@@ -502,8 +505,6 @@
             sensor-bindings = <&encoder_alt_tab &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
-        // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-
         os_layer {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 
@@ -519,6 +520,15 @@
             >;
 
             sensor-bindings = <&encoder_alt_tab &inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
+
+        layer_6 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans  &trans
+            >;
         };
     };
 };
