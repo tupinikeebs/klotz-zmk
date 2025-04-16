@@ -51,7 +51,7 @@
 
         combo_bspc {
             timeout-ms = <COMBOMS>;
-            key-positions = <3 4>;
+            key-positions = <13 14>;
             bindings = <&kp BSPC>;
         };
 
@@ -75,18 +75,11 @@
 
         combo_ret {
             timeout-ms = <COMBOMS>;
-            key-positions = <13 14>;
+            key-positions = <15 16>;
             bindings = <&kp RET>;
         };
 
         compatible = "zmk,combos";
-
-        combo_underscore {
-            timeout-ms = <COMBOMS>;
-            key-positions = <18 19>;
-            bindings = <&kp UNDERSCORE>;
-        };
-
         compatible = "zmk,combos";
 
         combo_ctrlz {
@@ -131,7 +124,7 @@
 
         combo_ctrls {
             timeout-ms = <COMBOMS>;
-            key-positions = <16 18>;
+            key-positions = <>;
             bindings = <&macro_ctrls>;
         };
 
