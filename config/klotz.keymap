@@ -30,14 +30,6 @@
         // GLOBAL
 
         compatible = "zmk,combos";
-
-        combo_Scroll {
-            timeout-ms = <COMBOMS>;
-            key-positions = <27 28>;
-            bindings = <&mo 5>;
-            layers = <5>;
-        };
-
         compatible = "zmk,combos";
         compatible = "zmk,combos";
 
