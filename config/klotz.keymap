@@ -141,6 +141,11 @@
             key-positions = <16 18>;
             bindings = <&macro_ctrls>;
         };
+
+        tab {
+            bindings = <&kp TAB>;
+            key-positions = <2 3>;
+        };
     };
 
     macros {
@@ -408,10 +413,10 @@
             // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
             bindings = <
-&kp Q           &kp W           &kp F        &kp P             &kp B      &kp J         &kp L              &kp U        &kp Y            &ct DOUBLE_QUOTES SINGLE_QUOTE
-&ct LEFT_GUI A  &ct LEFT_ALT R  &ct LCTRL S  &ct LEFT_SHIFT T  &kp G      &kp M         &ct RIGHT_SHIFT N  &ct RCTRL E  &ct RIGHT_ALT I  &ct RIGHT_GUI O
-&kp Z           &kp X           &kp C        &kp D             &kp V      &kp K         &kp H              &kp COMMA    &kp PERIOD       &ct QUESTION SLASH
-                                             &lt 1 SPACE       &lt 4 TAB  &ctl 3 ENTER  &lt 2 BACKSPACE
+&kp Q           &kp W           &kp F        &kp P             &kp B        &kp J             &kp L              &kp U        &kp Y            &ct DOUBLE_QUOTES SINGLE_QUOTE
+&ct LEFT_GUI A  &ct LEFT_ALT R  &ct LCTRL S  &ct LEFT_SHIFT T  &kp G        &kp M             &ct RIGHT_SHIFT N  &ct RCTRL E  &ct RIGHT_ALT I  &ct RIGHT_GUI O
+&kp Z           &kp X           &kp C        &kp D             &kp V        &kp K             &kp H              &kp COMMA    &kp PERIOD       &ct QUESTION SLASH
+                                             &lt 1 ESCAPE      &lt 4 SPACE  &ctl 3 BACKSPACE  &lt 2 ENTER
             >;
 
             sensor-bindings =
