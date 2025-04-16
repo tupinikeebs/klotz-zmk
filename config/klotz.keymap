@@ -43,7 +43,7 @@
 
         combo_spc_2 {
             timeout-ms = <COMBOMS>;
-            key-positions = <26 25>;
+            key-positions = <13 14>;
             bindings = <&kp SPACE>;
         };
 
@@ -51,7 +51,7 @@
 
         combo_bspc {
             timeout-ms = <COMBOMS>;
-            key-positions = <13 14>;
+            key-positions = <15 16>;
             bindings = <&kp BSPC>;
         };
 
@@ -75,7 +75,7 @@
 
         combo_ret {
             timeout-ms = <COMBOMS>;
-            key-positions = <15 16>;
+            key-positions = <25 26>;
             bindings = <&kp RET>;
         };
 
