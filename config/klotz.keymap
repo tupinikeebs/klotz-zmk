@@ -119,11 +119,6 @@
             bindings = <&kp TAB>;
             key-positions = <2 3>;
         };
-
-        Fn_layer {
-            bindings = <&to 4>;
-            key-positions = <0 1 2 3>;
-        };
     };
 
     macros {
