@@ -109,10 +109,10 @@
 
         compatible = "zmk,combos";
 
-        combo_ctrls {
+        combo_fn {
             timeout-ms = <COMBOMS>;
-            key-positions = <>;
-            bindings = <&macro_ctrls>;
+            key-positions = <30 31>;
+            bindings = <&mo 4>;
         };
 
         tab {
