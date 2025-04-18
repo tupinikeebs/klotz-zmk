@@ -411,7 +411,7 @@
 &kp Q            &kp W            &kp F         &kp P              &kp B        &kp J        &kp L               &kp U         &kp Y             &hmr DOUBLE_QUOTES SINGLE_QUOTE
 &hml LEFT_GUI A  &hml LEFT_ALT R  &hml LCTRL S  &hml LEFT_SHIFT T  &kp G        &kp M        &hmr RIGHT_SHIFT N  &hmr RCTRL E  &hmr RIGHT_ALT I  &hmr RIGHT_GUI O
 &kp Z            &kp X            &kp C         &kp D              &kp V        &kp K        &kp H               &kp COMMA     &kp PERIOD        &hmr QUESTION SLASH
-                                                &lt 1 ESCAPE       &lt 4 SPACE  &lt 3 ENTER  &lt 2 BACKSPACE
+                                                &lt 1 ESCAPE       &lt 5 SPACE  &lt 3 ENTER  &lt 2 BACKSPACE
             >;
 
             sensor-bindings =
@@ -474,10 +474,10 @@
             // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
             bindings = <
-&sys_reset    &trans        &trans     &trans          &trans  &trans      &kp F7      &kp F8  &kp F9  &kp F10
-&kp LEFT_GUI  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &trans  &kp BSPC    &kp F4      &kp F5  &kp F6  &kp F11
-&bootloader   &trans        &trans     &trans          &trans  &kp ESC     &kp F1      &kp F2  &kp F3  &kp F12
-                                       &trans          &trans  &skq LCTRL  &skq RSHFT
+&sys_reset    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2    &bt BT_CLR      &trans      &kp F7      &kp F8  &kp F9  &kp F10
+&kp LEFT_GUI  &kp LEFT_ALT  &kp LCTRL     &kp LEFT_SHIFT  &bt BT_CLR_ALL  &kp BSPC    &kp F4      &kp F5  &kp F6  &kp F11
+&bootloader   &trans        &trans        &trans          &trans          &kp ESC     &kp F1      &kp F2  &kp F3  &kp F12
+                                          &trans          &trans          &skq LCTRL  &skq RSHFT
             >;
 
             sensor-bindings = <&encoder_alt_tab &inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -485,9 +485,9 @@
 
         adjust_mouse_layer {
             bindings = <
-&bt BT_CLR_ALL  &ext_power EP_TOG  &trans        &trans        &bt BT_PRV    &trans    &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_CLR
+&bt BT_CLR_ALL  &ext_power EP_TOG  &trans        &trans        &bt BT_PRV    &trans    &trans          &trans          &trans        &trans
 &kp LGUI        &kp LALT           &kp LCTRL     &kp LSHFT     &bt BT_NXT    &trans    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT
-&bt BT_CLR      &bt BT_SEL 0       &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &mkp MB3  &trans          &trans          &trans        &bt BT_CLR_ALL
+&bt BT_CLR      &bt BT_SEL 0       &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &mkp MB3  &trans          &trans          &trans        &trans
                                                  &trans        &trans        &mkp MB1  &mkp MB2
             >;
 
