@@ -341,10 +341,8 @@
             bindings = <&kp>, <&kp>;
 
             tapping-term-ms = <200>;
-            quick-tap-ms = <160>;
+            quick-tap-ms = <120>;
             require-prior-idle-ms = <140>;
-            hold-trigger-on-release;
-            hold-trigger-key-positions = <14 24 30 31 0 0 1 2 3 4 11 12 13 14 21 22 23 24 30 31 20 10>;
         };
 
         ctl: custom_tap_layer {
@@ -391,11 +389,9 @@
             bindings = <&kp>, <&kp>;
 
             tapping-term-ms = <200>;
-            quick-tap-ms = <160>;
+            quick-tap-ms = <120>;
             require-prior-idle-ms = <140>;
-            hold-trigger-on-release;
             label = "HMR";
-            hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 25 26 27 28 29 33 32>;
         };
     };
 
