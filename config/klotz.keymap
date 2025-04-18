@@ -341,8 +341,6 @@
             bindings = <&kp>, <&kp>;
 
             tapping-term-ms = <200>;
-            quick-tap-ms = <120>;
-            require-prior-idle-ms = <140>;
         };
 
         ctl: custom_tap_layer {
@@ -389,8 +387,6 @@
             bindings = <&kp>, <&kp>;
 
             tapping-term-ms = <200>;
-            quick-tap-ms = <120>;
-            require-prior-idle-ms = <140>;
             label = "HMR";
         };
     };
