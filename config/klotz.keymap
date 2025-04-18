@@ -425,10 +425,10 @@
 
         nav_layer {
             bindings = <
-&hml LEFT_BRACE LEFT_BRACKET  &hml AMPERSAND N7          &hml ASTRK N8          &hml LEFT_PARENTHESIS N9  &hml RIGHT_BRACE RIGHT_BRACKET  &kp PRINTSCREEN  &trans          &trans          &trans        &trans
-&kp RGUI                      &kp LALT                   &kp LCTRL              &kp LSHFT                 &trans                          &caps_word       &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW
-&hml TILDE GRAVE              &hml EXCLAMATION NUMBER_1  &hml AT_SIGN NUMBER_2  &hml HASH NUMBER_3        &trans                          &kp INSERT       &kp HOME        &kp PAGE_DOWN   &kp PG_UP     &kp END
-                                                                                &trans                    &trans                          &kp SPACE        &kp BACKSPACE
+&hml LEFT_BRACE LEFT_BRACKET  &hml AMPERSAND N7          &hml ASTRK N8          &hml LEFT_PARENTHESIS N9  &hml RIGHT_BRACE RIGHT_BRACKET  &kp K_PLAY_PAUSE  &kp K_PREVIOUS  &kp C_VOL_DN    &kp C_VOLUME_UP  &kp K_NEXT
+&kp RGUI                      &kp LALT                   &kp LCTRL              &kp LSHFT                 &kp PRINTSCREEN                 &caps_word        &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW     &kp RIGHT_ARROW
+&hml TILDE GRAVE              &hml EXCLAMATION NUMBER_1  &hml AT_SIGN NUMBER_2  &hml HASH NUMBER_3        &trans                          &kp INSERT        &kp HOME        &kp PAGE_DOWN   &kp PG_UP        &kp END
+                                                                                &trans                    &trans                          &kp SPACE         &kp BACKSPACE
             >;
 
             sensor-bindings = <&inc_dec_kp DOWN_ARROW UP_ARROW>;
