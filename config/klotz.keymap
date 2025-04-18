@@ -432,7 +432,7 @@
             >;
 
             sensor-bindings =
-                <&encoder_alt_tab>,
+                <&inc_dec_kp DOWN_ARROW UP_ARROW>,
                 <&inc_dec_kp K_PREVIOUS K_NEXT>;
         };
 
