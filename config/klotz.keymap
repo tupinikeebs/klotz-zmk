@@ -484,32 +484,15 @@
 
         adjust_mouse_layer {
             bindings = <
-&trans    &trans    &trans     &trans     &trans  &trans    &trans          &trans          &trans        &trans
-&kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans  &trans    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT
-&trans    &trans    &trans     &trans     &trans  &mkp MB3  &trans          &trans          &trans        &trans
-                               &trans     &trans  &mkp MB1  &mkp MB2
+&trans    &trans    &trans     &trans     &trans  &trans     &trans          &trans          &trans        &trans
+&kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans  &trans     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT
+&trans    &trans    &trans     &trans     &trans  &mkp MCLK  &trans          &trans          &trans        &trans
+                               &trans     &trans  &mkp LCLK  &mkp RCLK
             >;
 
             sensor-bindings =
                 <&inc_dec_kp PAGE_DOWN PG_UP>,
                 <&inc_dec_kp C_NEXT K_PREV>;
-        };
-
-        os_layer {
-            // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-
-            display-name = "OS";
-
-            // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
-
-            bindings = <
-&kp LA(F4)  &trans    &os_hk T  &os_hk H  &trans  &trans  &trans  &trans  &trans  &trans
-&os_hk A    &os_hk V  &os_hk C  &os_hk F  &trans  &trans  &trans  &trans  &trans  &trans
-&trans      &os_hk E  &trans    &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                                &trans    &trans  &trans  &trans
-            >;
-
-            sensor-bindings = <&encoder_alt_tab &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         layer_7 {
