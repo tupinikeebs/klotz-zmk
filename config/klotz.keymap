@@ -129,6 +129,16 @@
             key-positions = <32 33>;
             timeout-ms = <COMBOMS>;
         };
+
+        TO_ARROWS {
+            bindings = <&tog 7>;
+            key-positions = <1 2 3 0>;
+        };
+
+        to_base {
+            bindings = <&tog 0>;
+            key-positions = <6 7 8 9>;
+        };
     };
 
     macros {
@@ -504,6 +514,20 @@
             sensor-bindings =
                 <&inc_dec_kp PAGE_DOWN PG_UP>,
                 <&inc_dec_kp C_NEXT K_PREV>;
+        };
+
+        Base_arrows {
+            display-name = "BASE";
+            bindings = <
+&kp Q            &kp W            &kp F         &kp P              &kp B        &kp J        &kp L               &kp U         &kp Y             &hmr DOUBLE_QUOTES SINGLE_QUOTE
+&hml LEFT_GUI A  &hml LEFT_ALT R  &hml LCTRL S  &hml LEFT_SHIFT T  &kp G        &kp M        &hmr RIGHT_SHIFT N  &hmr RCTRL E  &hmr RIGHT_ALT I  &hmr RIGHT_GUI O
+&kp Z            &kp X            &kp C         &kp D              &kp V        &kp K        &kp H               &kp COMMA     &kp PERIOD        &hmr QUESTION SLASH
+                                                &lt 1 ESCAPE       &lt 5 SPACE  &lt 3 ENTER  &lt 2 BACKSPACE
+            >;
+
+            sensor-bindings =
+                <&inc_dec_kp DOWN_ARROW UP_ARROW>,
+                <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
     };
 };
