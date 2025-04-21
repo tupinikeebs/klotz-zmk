@@ -57,7 +57,7 @@
 
         combo_del {
             timeout-ms = <COMBOMS>;
-            key-positions = <8 9>;
+            key-positions = <6 7>;
             bindings = <&kp DEL>;
         };
 
@@ -135,9 +135,10 @@
             key-positions = <1 2 3 0>;
         };
 
-        to_base {
-            bindings = <&tog 0>;
-            key-positions = <6 7 8 9>;
+        backspace_auto {
+            bindings = <&skq BACKSPACE>;
+            key-positions = <5 6>;
+            timeout-ms = <COMBOMS>;
         };
     };
 
