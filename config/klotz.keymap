@@ -13,7 +13,7 @@
 #define COMBOMS 25
 
 &lt {
-    flavor = "balanced";
+    flavor = "tap-preferred";
     tapping-term-ms = <220>;
     hold-trigger-key-positions = <>;
 };
@@ -349,7 +349,7 @@
         hml: hml {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "balanced";
+            flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
 
             tapping-term-ms = <200>;
@@ -358,7 +358,7 @@
         ctl: custom_tap_layer {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "balanced";
+            flavor = "tap-preferred";
             bindings = <&mo>, <&kp>;
 
             tapping-term-ms = <220>;
@@ -395,7 +395,7 @@
         hmr: hmr {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "balanced";
+            flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
 
             tapping-term-ms = <200>;
