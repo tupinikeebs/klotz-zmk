@@ -172,11 +172,11 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LCTRL>,
+                <&kp LEFT_GUI>,
                 <&macro_tap>,
                 <&kp Z>,
                 <&macro_release>,
-                <&kp LCTRL>;
+                <&kp LEFT_GUI>;
         };
 
         macro_ctrlshftz: macro_ctrlshftz {
@@ -184,13 +184,13 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LCTRL>,
+                <&kp LGUI>,
                 <&macro_press>,
                 <&kp LSHFT>,
                 <&macro_tap>,
                 <&kp Z>,
                 <&macro_release>,
-                <&kp LCTRL>,
+                <&kp LGUI>,
                 <&macro_release>,
                 <&kp LSHFT>;
         };
@@ -200,11 +200,11 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LCTRL>,
+                <&kp LGUI>,
                 <&macro_tap>,
                 <&kp X>,
                 <&macro_release>,
-                <&kp LCTRL>;
+                <&kp LGUI>;
         };
 
         macro_ctrlc: macro_ctrlc {
@@ -212,11 +212,11 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LCTRL>,
+                <&kp LGUI>,
                 <&macro_tap>,
                 <&kp C>,
                 <&macro_release>,
-                <&kp LCTRL>;
+                <&kp LGUI>;
         };
 
         macro_ctrlv: macro_ctrlv {
@@ -224,11 +224,11 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LCTRL>,
+                <&kp LGUI>,
                 <&macro_tap>,
                 <&kp V>,
                 <&macro_release>,
-                <&kp LCTRL>;
+                <&kp LGUI>;
         };
 
         macro_ctrls: macro_ctrls {
@@ -236,11 +236,11 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LCTRL>,
+                <&kp LGUI>,
                 <&macro_tap>,
                 <&kp S>,
                 <&macro_release>,
-                <&kp LCTRL>;
+                <&kp LGUI>;
         };
 
         macro_up: macro_up {
